@@ -194,44 +194,66 @@ export default function Experience() {
         </div>
       </section>
 
-      <section className='bg-[#424E60] px-[36px] mb-3'>
-        <h2 className='font-semibold w-[176px] mx-auto text-[32px] leading-[56px] mt-[31px] mb- text-white  text-center'>
+      <section className='bg-[#424E60] w-full px-[24px] mb-3 lg:pb-[124px]'>
+        <h2 className='font-semibold w-[176px] sm:w-[560px] mx-auto text-[32px] leading-[56px] mt-[31px] lg:mt-[110px] mb-[50px] text-white  text-center'>
           Volunteer Experience
         </h2>
-        <div className='w-full m-auto  grid grid-col-1 md:grid-cols-2  gap-4 min-h-screen mb-4'>
+        <div className='w-full m-auto  grid grid-col-1 md:grid-cols-2 place-items-center  gap-4  mb-4'>
           {volExp.map((exp, i) => (
             <div
               key={i}
-              className='border-l-yellow-400 border-l-4 bg-white rounded-lg w-[365px] h-[365px] justify-center p-10 flex flex-col gap-3 mb-4'
+              className='border-l-yellow-400 border-l-4 bg-white rounded-lg lg:w-[640px] sm:h-[250px] w-[345px] h-[345px] justify-center p-10 flex flex-col gap-3 mb-4'
             >
               <h3 className='font-bold text-lg'>{exp.head}</h3>
-              <p className='text-[16px]'>{exp.text}</p>
+              <p className='text-[16px] leading-[20px]'>{exp.text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* <section className=' mb-3'>
-        <h2 className='font-bold text-[42px] py-10   text-center'>
+      <section className=' mb-3'>
+        <h2
+          style={poppins.style}
+          className='font-semibold w-[321px] mx-auto mt-[40px] mb-[50px] text-[32px] leading-[56px] text-center'
+        >
           Research Experience
         </h2>
-        <div className='w-[90%] m-auto md:w-[70%] grid grid-col-1 md:grid-cols-2  gap-4 min-h-screen mb-4'>
-          <div>
-            <h2 className='font-bold'>
-              Westcliff University/Department of Business Administration/Irvine,
-              CA, USA Doctoral Student 2017-2022
+        <div className='w-[90%] m-auto  grid grid-col-1 md:grid-cols-2  gap-4 min-h-screen mb-4'>
+          <div className='text-header-color relative pb-5'>
+            <div className='flex  absolute bottom-1 right-2 self-end items-center space-x-3'>
+              <p
+                style={poppins.style}
+                className='font-semibold text-[22px] leading-[22px]'
+              >
+                Read more...
+              </p>
+              <button
+                className={`${!truncate ? "rotate-180" : "rotate-0"}`}
+                onClick={() => {
+                  setTruncate(!truncate);
+                }}
+              >
+                <RiArrowDropDownLine />
+              </button>
+            </div>
+            <h2
+              style={poppins.style}
+              className='font-semibold w-[380px] sm:w-[320px]  mb-[20px] text-[22px] sm:text-[28px] sm:leading-[28px] leading-[22px]'
+            >
+              Westcliff University/ Department of Business
+              Administration/Irvine, CA, USA Doctoral Student 2017-2022
             </h2>
-            <h3>
+            <h3 className='text-[20px] leading-[30px] font-normal mb-[30px]'>
               Dissertation Chairman: Professor Elsayess Mahmood: Ph.D., PMP,
               MCS. Methodologist: Professor Simin Hojat, Ph.D. Subject Matter
               Expert: Professor Omar Haddad DBA Program Chair: Professor Alex
               Sherm Doctoral Dissertation: Integrating Blockchain into
               Electronic Stamp Duty Collections (A Case Study).
             </h3>
-
-            <h2 className='font-bold my-12'>Brief description of Project</h2>
-
-            <p>
+            <h2 className='font-bold text-[20px] sm:text-[28px] sm:leading-[24px]  leading-[23.46px] mb-[15px]'>
+              Brief description of Project
+            </h2>
+            <p className='font-normal text-[17px] leading-[24px]'>
               In this scholarly presentation, I embark on an immersive journey
               into the heart of a profound financial syndicate fraud that has
               cast a shadow over Nigeria&apos;s banking landscape. This
@@ -241,109 +263,184 @@ export default function Experience() {
               advanced form. Moreover, my exploration extends beyond analysis,
               culminating in the proposal of a pioneering solution poised to
               redefine the trajectory of financial integrity within the nation.
-              <br />
-              <br />
-              <b>Unveiling the Fraud Landscape:</b> My investigative endeavor
-              delves deep into the inner workings of Nigeria&apos;s banks,
-              financial institutions, and the central bank, uncovering the
-              elaborate network that perpetuated this audacious fraud. Through
-              meticulous analysis, I navigate the intricate web of transactions,
-              interactions, and collaborations that facilitated the
-              unprecedented scale of the syndicate&apos;s operations.
-              Understanding the &quot;How&quot; and &quot;Methods&quot;: Central
-              to my academic endeavor is a comprehensive understanding of the
-              modus operandi adopted by the syndicate. I meticulously dissect
-              the intricate methods employed, ranging from falsified
-              documentation to strategic collusion, unveiling the intricate
-              tactics that enabled the fraud&apos;s gradual evolution into an
-              advanced and complex phenomenon. This detailed exploration serves
-              as a foundation for comprehending the depth of the challenge at
-              hand.
-              <br />
-              <br />
-              <b>Causal Factors and Root Analysis:</b> Beyond the surface
-              intricacies, I venture into the realm of causal factors, delving
-              into the underlying socioeconomic, regulatory, and ethical
-              considerations that paved the way for such an extensive fraud.
-              This exploration seeks to unearth the systemic weaknesses and
-              structural vulnerabilities that allowed the syndicate to thrive,
-              setting the stage for subsequent solution proposals.
-              <br />
-              <br />
-              <b>A Pioneering Solution:</b> Charting a Path Forward: With
-              insights gleaned from my meticulous examination, I proudly present
-              an innovative and near-permanent solution to mitigate the looming
-              specter of financial syndicate fraud. This multifaceted solution
-              combines technological advancements, robust regulatory reforms,
-              and a paradigm shift in corporate governance to form a formidable
-              defense against future occurrences. By addressing the root causal
-              factors and reinforcing the nation&apos;s financial
-              infrastructure, my proposed solution offers a transformative
-              blueprint for resilience and accountability.
-              <br />
-              <br />
-              <b>Proposal:</b> An innovative proposition of integrating a
-              centralized database system with cutting-edge blockchain
-              technology. This visionary blockchain system, fortified by
-              cryptographic measures, is an impregnable fortress against
-              fraudulence. Beyond its formidable security, it ushers in a new
-              era of democratized control, placing the governance and approval
-              prerogatives into the hands of select critical stakeholders who
-              are meticulously co-nominated. In addition to its safeguarding
-              capabilities, this paradigm-shifting proposal promises a seamless
-              transformation of remittance procedures. The existing convoluted
-              process, plagued by third-party interferences, becomes a relic of
-              the past. Instead, a future propelled by this technology envisions
-              an autonomous and unerring channel for remittances to the
-              government account, leaving no room for external disruptions. This
-              streamlines operations and ensures that accuracy reigns supreme in
-              the financial ecosystem.
-              <br />
-              <br />
-              <b>Conclusion:</b> Nigeria was a case study, but the proposal
-              applies worldwide to fraud-proof electronic tax collection
-              processes.
             </p>
+            <br />
+            <br />
+            {!truncate && (
+              <div>
+                <b className='font-bold text-[18px] leading-[24px]'>
+                  Unveiling the Fraud Landscape:
+                </b>
+                <p className='text-[18px] leading-[24px]'>
+                  My investigative endeavor delves deep into the inner workings
+                  of Nigeria&apos;s banks, financial institutions, and the
+                  central bank, uncovering the elaborate network that
+                  perpetuated this audacious fraud. Through meticulous analysis,
+                  I navigate the intricate web of transactions, interactions,
+                  and collaborations that facilitated the unprecedented scale of
+                  the syndicate&apos;s operations. Understanding the
+                  &quot;How&quot; and &quot;Methods&quot;: Central to my
+                  academic endeavor is a comprehensive understanding of the
+                  modus operandi adopted by the syndicate. I meticulously
+                  dissect the intricate methods employed, ranging from falsified
+                  documentation to strategic collusion, unveiling the intricate
+                  tactics that enabled the fraud&apos;s gradual evolution into
+                  an advanced and complex phenomenon. This detailed exploration
+                  serves as a foundation for comprehending the depth of the
+                  challenge at hand.
+                </p>
+                <br />
+                <br />
+                <b className='font-bold text-[18px] leading-[24px]'>
+                  Understanding the &quot;How&quot; and &quot;Methods&quot;:
+                </b>{" "}
+                <p>
+                  Central to my academic endeavor is a comprehensive
+                  understanding of the modus operandi adopted by the syndicate.
+                  I meticulously dissect the intricate methods employed, ranging
+                  from falsified documentation to strategic collusion, unveiling
+                  the intricate tactics that enabled the fraud&apos;s gradual
+                  evolution into an advanced and complex phenomenon. This
+                  detailed exploration serves as a foundation for comprehending
+                  the depth of the challenge at hand.
+                </p>
+                <br />
+                <br />
+                <b className='font-bold text-[18px] leading-[24px]'>
+                  Causal Factors and Root Analysis:
+                </b>{" "}
+                <p>
+                  Beyond the surface intricacies, I venture into the realm of
+                  causal factors, delving into the underlying socioeconomic,
+                  regulatory, and ethical considerations that paved the way for
+                  such an extensive fraud. This exploration seeks to unearth the
+                  systemic weaknesses and structural vulnerabilities that
+                  allowed the syndicate to thrive, setting the stage for
+                  subsequent solution proposals.
+                </p>
+                <br />
+                <br />
+                <b className="className='font-bold text-[18px] leading-[24px]'">
+                  A Pioneering Solution:
+                </b>{" "}
+                <p>
+                  Charting a Path Forward: With insights gleaned from my
+                  meticulous examination, I proudly present an innovative and
+                  near-permanent solution to mitigate the looming specter of
+                  financial syndicate fraud. This multifaceted solution combines
+                  technological advancements, robust regulatory reforms, and a
+                  paradigm shift in corporate governance to form a formidable
+                  defense against future occurrences. By addressing the root
+                  causal factors and reinforcing the nation&apos;s financial
+                  infrastructure, my proposed solution offers a transformative
+                  blueprint for resilience and accountability.
+                </p>
+                <br />
+                <br />
+                <b className='font-bold text-[18px] leading-[24px]'>
+                  Proposal:
+                </b>{" "}
+                <p>
+                  An innovative proposition of integrating a centralized
+                  database system with cutting-edge blockchain technology. This
+                  visionary blockchain system, fortified by cryptographic
+                  measures, is an impregnable fortress against fraudulence.
+                  Beyond its formidable security, it ushers in a new era of
+                  democratized control, placing the governance and approval
+                  prerogatives into the hands of select critical stakeholders
+                  who are meticulously co-nominated. In addition to its
+                  safeguarding capabilities, this paradigm-shifting proposal
+                  promises a seamless transformation of remittance procedures.
+                  The existing convoluted process, plagued by third-party
+                  interferences, becomes a relic of the past. Instead, a future
+                  propelled by this technology envisions an autonomous and
+                  unerring channel for remittances to the government account,
+                  leaving no room for external disruptions. This streamlines
+                  operations and ensures that accuracy reigns supreme in the
+                  financial ecosystem.
+                </p>
+                <br />
+                <br />
+                <b className='font-bold text-[18px] leading-[24px]'>
+                  Conclusion:
+                </b>{" "}
+                <p>
+                  Nigeria was a case study, but the proposal applies worldwide
+                  to fraud-proof electronic tax collection processes.
+                </p>
+              </div>
+            )}
           </div>
 
-          <div>
-            <h2 className='font-bold'>
+          <div className='relative pb-10'>
+            <div className='flex sm:hidden  absolute bottom-1 right-2 self-end items-center space-x-3'>
+              <p
+                style={poppins.style}
+                className='font-semibold text-[22px] leading-[22px]'
+              >
+                Read more...
+              </p>
+              <button
+                className={`${!truncate ? "rotate-180" : "rotate-0"}`}
+                onClick={() => {
+                  setTruncate(!truncate);
+                }}
+              >
+                <RiArrowDropDownLine />
+              </button>
+            </div>
+            <h2
+              style={poppins.style}
+              className='font-semibold w-[380px] mb-[20px] mt-[50px] sm:mt-[0px] sm:text-[28px] sm:leading-[28px] text-[22px] leading-[22px]'
+            >
               Coventry University, London Campus/Department of Business
               Administration/London, UK
             </h2>
-            <h3>
+            <h3 className='text-[20px] leading-[30px] font-normal mb-[30px]'>
               Consulting Fellow 2015 -2016 Mentor: Doctor Beeker (Ph.D., MEI,
               MCMI, FHEA, FRSA). Project Title: “Developing Entry Strategy into
               the South American and the Caribbean Oil and Gas Market.”
             </h3>
-
-            <h2 className='font-bold  my-12'>Tasks</h2>
-
-            <p>
+            <h2 className='font-bold text-[20px] leading-[23.46px] sm:text-[28px] sm:leading-[24px]  mt-[30px] mb-[15px]'>
+              Tasks
+            </h2>
+            <p className='text-[17px] leading-[24px]'>
               Conducted extensive research to identify market entry strategies
               into South America and the Caribbean region and made categorized
               recommendations for Genesis Oil and Gas.
+            </p>
+            <br />
+            <br />
+            <b className='font-bold text-[18px] leading-[24px]'>
+              Short-term:
+            </b>{" "}
+            Projects in the production phase are under five years old.
+            Short-term recommendations consist of ongoing projects at the
+            producing stage. Due to the oil price downturn, most Oil and Gas
+            companies are looking for better opportunities to enhance their
+            production while reducing costs. As a short-term strategy, Genesis
+            can enter projects immediately in the producing stages to take
+            advantage of the volatility in the oil and gas industry.
+            <br />
+            <br />
+            <div className='hidden sm:flex sm:flex-col'>
+              <b className='font-bold text-[18px] leading-[24px]'>Mid-term:</b>{" "}
+              Projects in the development phase are 5 – 10 years old. Mid-term
+              recommendations include projects at the exploration stage. This
+              stage of the hydrocarbon production process is a complex and
+              costly business. In contrast, a positive result is not granted,
+              and hydrocarbons can be located in the most inhospitable parts of
+              the world (BP 2008). Oil companies prefer to save funds nowadays,
+              and it is an excellent opportunity for Genesis, with its area of
+              expertise, to join the projects.
               <br />
-              <br /> Short-term: Projects in the production phase are under five
-              years old. Short-term recommendations consist of ongoing projects
-              at the producing stage. Due to the oil price downturn, most Oil
-              and Gas companies are looking for better opportunities to enhance
-              their production while reducing costs. As a short-term strategy,
-              Genesis can enter projects immediately in the producing stages to
-              take advantage of the volatility in the oil and gas industry.
               <br />
-              <br /> Mid-term: Projects in the development phase are 5 – 10
-              years old. Mid-term recommendations include projects at the
-              exploration stage. This stage of the hydrocarbon production
-              process is a complex and costly business. In contrast, a positive
-              result is not granted, and hydrocarbons can be located in the most
-              inhospitable parts of the world (BP 2008). Oil companies prefer to
-              save funds nowadays, and it is an excellent opportunity for
-              Genesis, with its area of expertise, to join the projects.
-              <br />
-              <br /> Long-term: Prospective projects are for more than ten
-              years. According to PWC (2016), every oil and gas player,
-              including service providers, can adopt long-term strategies:
+              <b className='font-bold text-[18px] leading-[24px]'>
+                Long-term:
+              </b>{" "}
+              Prospective projects are for more than ten years. According to PWC
+              (2016), every oil and gas player, including service providers, can
+              adopt long-term strategies:
               <br />
               1. Develop a more robust supply chain management capability;
               <br />
@@ -358,10 +455,48 @@ export default function Experience() {
               for Genesis; this available recommendation strategy requires an
               extensive period to establish a business platform due to
               macroeconomics, technologies, legislation framework, and finances.
-            </p>
+            </div>
+            {!truncate && (
+              <div>
+                <b className='font-bold text-[18px] leading-[24px]'>
+                  Mid-term:
+                </b>{" "}
+                Projects in the development phase are 5 – 10 years old. Mid-term
+                recommendations include projects at the exploration stage. This
+                stage of the hydrocarbon production process is a complex and
+                costly business. In contrast, a positive result is not granted,
+                and hydrocarbons can be located in the most inhospitable parts
+                of the world (BP 2008). Oil companies prefer to save funds
+                nowadays, and it is an excellent opportunity for Genesis, with
+                its area of expertise, to join the projects.
+                <br />
+                <br />
+                <b className='font-bold text-[18px] leading-[24px]'>
+                  Long-term:
+                </b>{" "}
+                Prospective projects are for more than ten years. According to
+                PWC (2016), every oil and gas player, including service
+                providers, can adopt long-term strategies:
+                <br />
+                1. Develop a more robust supply chain management capability;
+                <br />
+                2. Invest in human capital & cost structure,
+                <br />
+                3. Capture the value of technologies, and
+                <br />
+                4. Align the asset and investment portfolio with a future source
+                of value. Based on research findings identified that Guyana and
+                Chile are the two countries that seize emerging strategic
+                opportunities. The table below shows the long-term
+                recommendation for Genesis; this available recommendation
+                strategy requires an extensive period to establish a business
+                platform due to macroeconomics, technologies, legislation
+                framework, and finances.
+              </div>
+            )}
           </div>
         </div>
-      </section> */}
+      </section>
     </>
   );
 }
