@@ -6,7 +6,7 @@ const ContactMe = () => {
   return (
     <div
       id='contact'
-      className=' mt-20 flex flex-col md:flex-row gap-4 justify-between p-5  bg-white w-full  m-auto rounded-xl'
+      className=' mt-20 flex flex-col md:flex-row gap-4 justify-between p-5  bg-white w-full lg:w-[85%] m-auto rounded-xl'
     >
       <div className='w-full md:w-1/2'>
         <h3 className='font-bold text-[52px] mb-2'>Contact</h3>

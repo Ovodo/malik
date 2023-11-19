@@ -8,6 +8,27 @@ import ContactMe from "./components/Contact";
 import Link from "next/link";
 import useFonts from "@/hooks/useFonts";
 
+const socialImages = [
+  { img: "facebook", link: "" },
+  { img: "web", link: "" },
+  { img: "instagram", link: "" },
+  { img: "linkedin", link: "" },
+];
+
+const Socials = ({ src }: { src: string }) => {
+  return (
+    <div
+      className={` ${
+        src.includes("facebook") ? "bg-header-color" : "bg-white"
+      } w-12 h-12 p-[15px] rounded-[4px]`}
+    >
+      <div className='w-[18px] cursor-pointer h-[18px] relative'>
+        <Image fill alt='socials' src={src} />
+      </div>
+    </div>
+  );
+};
+
 export default function Home() {
   const { poppins } = useFonts();
   return (
@@ -25,9 +46,18 @@ export default function Home() {
           </h4>
           <div className='space-y-10'>
             <p className=" mb-5  [font-family:'Poppins-Regular',Helvetica] lg:w-[645px] font-normal text-body-color text-[20px] leading-[28.1px] md:text-[26px] tracking-[0] md:leading-[39px]">
-              <strong> Unique Group, Inc. Founder CEO</strong> Beverly Hills,
-              CA, USA.
+              Founder Unique Group, Inc Beverly Hills, CA, USA
             </p>
+            <div className='flex space-x-4'>
+              {socialImages.map((item, index: number) => {
+                return (
+                  <Socials
+                    src={`/assets/socials/${item.img}.svg`}
+                    key={index.toString()}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
         <div className='absolute top-[180px] sm:absolute  sm:top-[239px] right-0 lg:relative lg:right-0 lg:top-0 w-[251px] h-[367px] sm:w-[385.43px] sm:h-[561px]  lg:w-[482px]  lg:h-[802px]'>
@@ -48,7 +78,7 @@ export default function Home() {
             alt='hero'
             quality={100}
           />
-          <div className='w-[377px] h-[377px] sm:w-[527px] sm:h-[527px] lg:w-[752px]  border border-blue-950 absolute bottom-0 right-[0px]  -z-20 lg:h-[752px] rounded-full bg-header-color' />
+          <div className='w-[377px] h-[377px] sm:w-[527px] sm:h-[527px] lg:w-[752px]  border border-blue-950 absolute bottom-0 right-[0px]  -z-20 lg:h-[752px] rounded-full bg-[#8A232A]' />
         </div>
       </section>
 
