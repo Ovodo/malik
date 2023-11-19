@@ -39,14 +39,10 @@ const Navbar = () => {
   //------------------------------------------------------------------USE EFFECTS
 
   return (
-    <div className='relative shadow-sm  shadow-slate-300 z-20   flex items-center lg:justify-around bg-white h-[7vh] lg:h-[12vh]'>
-      <Image
-        alt='logo'
-        className='ml-5 lg:ml-0'
-        width={37}
-        height={67}
-        src={Logo}
-      />
+    <div className='relative shadow-sm  shadow-slate-300 z-20   flex items-center lg:justify-around bg-white h-[12vh] lg:h-[12vh]'>
+      <div className='relative ml-5 lg:ml-0 w-[37px] h-[67px] lg:w-[37px] lg:h-[67px]'>
+        <Image fill alt='logo' className='' src={Logo} />
+      </div>
       <ul
         className={`pl-5 w-[60vw] menu  ${
           !isOpen
