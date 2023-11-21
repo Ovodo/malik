@@ -14,42 +14,42 @@ import aw13 from "@/public/assets/aw13.png";
 import aw14 from "@/public/assets/aw14.png";
 import aw15 from "@/public/assets/aw15.png";
 import aw16 from "@/public/assets/aw16.png";
-import aw17 from "@/public/assets/aw17.png";
+import gba from "@/public/assets/gba.png";
 import Image from "next/image";
 
 const images = [
-  aw,
-  aw1,
-  aw2,
-  aw3,
-  aw4,
-  aw5,
-  aw6,
   aw7,
-  aw8,
   aw9,
   aw11,
+  aw1,
   aw12,
-  aw13,
-  aw14,
-  aw15,
+  aw4,
+  aw3,
+  aw5,
+  aw8,
   aw16,
-  aw17,
+  aw6,
+  aw2,
+  gba,
+  aw,
+  // aw13,
+  // aw14,
+  aw15,
 ];
 const ProfessionalA = () => {
   return (
     <div
       id='certification'
-      className='text-center overflow-hidden w-full md:px-20 m-auto p-5 py-20 bg-white'
+      className='text-center overflow-hidden w-full  m-auto p-5 py-20 bg-white'
     >
-      <h4 className='text-center text-[48px] leading-[56px] font-semibold'>
+      <h4 className='text-center text-[48px] mb-[83px] leading-[56px] font-semibold'>
         Professional Association
       </h4>
 
-      <div className='flex lg:grid min-w-max lg:grid-cols-5 gap-5 justify-center'>
-        {images.map((img, i) => (
+      <div className='flex flex-wrap-reverse  justify-center'>
+        {images.reverse().map((img, i) => (
           <div
-            className='w-[200px] relative  border-black h-[200px]'
+            className='w-[10vw]  mb-[34px] mx-2 relative shadow-[0_5px_5px_rgba(43,56,76,0.2)]  border-black h-[10vw]'
             key={i.toString()}
           >
             <Image src={img} alt='cert' fill className='' objectFit='contain' />

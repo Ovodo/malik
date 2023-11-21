@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import AwardImg from "@/public/assets/awa.png";
+import useFonts from "@/hooks/useFonts";
 
 const awards = [
   `National Scholarship for Free Secondary Education, Federal Government of Nigeria, 1986`,
@@ -14,6 +15,7 @@ const awards = [
 const HandA = () => {
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
   const [currentIndex, setCurrentIndex] = useState(2);
+  const { poppins } = useFonts();
 
   // useEffect(() => {
   //   const intervalId = setInterval(() => {
@@ -72,12 +74,15 @@ const HandA = () => {
   return (
     <div
       id='handa'
-      className='py-24 min-h-screen flex flex-col gap-10 md:px-20 m-auto bg-white overflow-hidden'
+      className='flex  flex-col gap-10 pb-12 md:px-20 m-auto bg-white overflow-hidden'
     >
-      <h2 className='py-10 text-center font-bold text-[52px]'>
+      <h2
+        style={poppins.style}
+        className='text-center pt-[28px] font-semibold text-[32px] leading-[56px] lg:text-[52px]'
+      >
         Honors And Awards
       </h2>
-      <div className='flex items-center flex-col justify-around  min-h-[70vh] overflow-hidden w-full relative'>
+      <div className='flex items-center flex-col justify-around  min-h-[60vh] overflow-hidden w-full relative'>
         {awards.map((text, index) => (
           <motion.div
             key={index}
@@ -92,7 +97,7 @@ const HandA = () => {
             onDragEnd={handleDragEnd}
           >
             <Image src={AwardImg} alt='' className='w-full' />
-            <p className='p-3 font-bold mt-10'>{text}</p>
+            <p className='p-3 font-semibold'>{text}</p>
           </motion.div>
         ))}
       </div>

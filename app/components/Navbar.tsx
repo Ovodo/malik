@@ -17,7 +17,7 @@ const skills = [
   // { title: "Certification/License", link: "#Certification" },
 ];
 const work = [
-  { title: "Experience", link: "Experience" },
+  { title: "Work", link: "Experience" },
   { title: "Professional", link: "#Professional" },
   { title: "Volunteer", link: "#Volunteer" },
   { title: "Research", link: "#Research" },
@@ -39,43 +39,33 @@ const Navbar = () => {
   //------------------------------------------------------------------USE EFFECTS
 
   return (
-    <div className='relative shadow-sm  shadow-slate-300 z-20   flex items-center lg:justify-around bg-white h-[12vh] lg:h-[12vh]'>
+    <div className='relative shadow-sm w-full shadow-slate-300 z-20   flex items-center lg:justify-around bg-white h-[12vh] lg:h-[12vh]'>
       <div className='relative ml-5 lg:ml-0 w-[37px] h-[67px] lg:w-[37px] lg:h-[67px]'>
         <Image fill alt='logo' className='' src={Logo} />
       </div>
       <ul
-        className={`pl-5 w-[60vw] menu  ${
+        className={`pl-5 w-[70vw] menu  ${
           !isOpen
             ? "-translate-x-full opacity-0"
             : "translate-x-0 opacity-100 scale-100 z-10"
         }  h-[95vh] lg:h-full  duration-300 lg:translate-x-0  lg:opacity-100 transition-all ease-linear  lg:flex-row items-start justify-start lg:justify-between lg:items-center absolute lg:relative top-[6.5vh] lg:top-0 left-0 flex flex-col bg-white`}
       >
         <li className={listStyle}>
-          <Link href={"#handa"}>Honours/Awards</Link>
+          <Link href={"/certification"}>Cerfifications</Link>
         </li>
         <li className={listStyle}>
-          <Link href={"#about-me"}>About Me</Link>
+          <Link className='text-center break-all' href={"/research"}>
+            Research and Articles
+          </Link>
         </li>
         <li className={listStyle}>
-          <div className='flex'>
-            <p>Skillsets</p>
-            <div
-              onClick={(e) => {
-                console.log(e);
-              }}
-              className='arrow hidden lg:flex ml-2'
-            >
-              <RiArrowDropDownLine />
-            </div>
-          </div>
-          <SubMenu toggle={toggleMenu} list={skills} />
-        </li>
-        <li className={listStyle}>
-          <Link href={"#certification"}>Certification</Link>
+          <Link className='text-center break-all' href={"/skill"}>
+            Skillsets
+          </Link>
         </li>
         <li className={listStyle}>
           <div className='flex'>
-            <p>Experience</p>
+            <p>Selected Projects</p>
             <div className='arrow hidden lg:flex ml-2'>
               <RiArrowDropDownLine />
             </div>
