@@ -40,9 +40,12 @@ const Navbar = () => {
 
   return (
     <div className='relative shadow-sm w-full shadow-slate-300 z-20   flex items-center lg:justify-around bg-white h-[12vh] lg:h-[12vh]'>
-      <div className='relative ml-5 lg:ml-0 w-[37px] h-[67px] lg:w-[37px] lg:h-[67px]'>
+      <Link
+        href={"/"}
+        className='relative ml-5 lg:ml-0 w-[37px] h-[67px] lg:w-[37px] lg:h-[67px]'
+      >
         <Image fill alt='logo' className='' src={Logo} />
-      </div>
+      </Link>
       <ul
         className={`pl-5 w-[70vw] menu  ${
           !isOpen
@@ -51,11 +54,11 @@ const Navbar = () => {
         }  h-[95vh] lg:h-full  duration-300 lg:translate-x-0  lg:opacity-100 transition-all ease-linear  lg:flex-row items-start justify-start lg:justify-between lg:items-center absolute lg:relative top-[6.5vh] lg:top-0 left-0 flex flex-col bg-white`}
       >
         <li className={listStyle}>
-          <Link href={"/certification"}>Cerfifications</Link>
+          <Link href={"/certification"}>Certifications</Link>
         </li>
         <li className={listStyle}>
           <Link className='text-center break-all' href={"/research"}>
-            Research and Articles
+            Research
           </Link>
         </li>
         <li className={listStyle}>
@@ -64,23 +67,19 @@ const Navbar = () => {
           </Link>
         </li>
         <li className={listStyle}>
-          <div className='flex'>
-            <p>Selected Projects</p>
-            <div className='arrow hidden lg:flex ml-2'>
-              <RiArrowDropDownLine />
-            </div>
-          </div>
-          <SubMenu toggle={toggleMenu} list={work} />
+          <Link className='text-center break-all' href={"/experience"}>
+            Selected Projects
+          </Link>
         </li>
         <Link
-          href={"#contact"}
+          href={"/#contact"}
           className='px-5 py-4 absolute lg:relative lg:hidden flex top-[60vh] lg:top-0  ml-[12px] lg:mr-[  14px] font-semibold text-[20px] tracking-[var(--header-letter-spacing)] [font-style:var(--header-font-style)] leading-[var(--header-line-height)] text-white bg-header-color rounded-md'
         >
           Contact
         </Link>
       </ul>
       <Link
-        href={"#contact"}
+        href={"/#contact"}
         className='px-5 py-4 absolute lg:relative lg:flex hidden top-[60vh] md:top-0  ml-[12px] md:mr-[  14px] font-semibold text-[20px] tracking-[var(--header-letter-spacing)] [font-style:var(--header-font-style)] leading-[var(--header-line-height)] text-white bg-header-color rounded-md'
       >
         Contact

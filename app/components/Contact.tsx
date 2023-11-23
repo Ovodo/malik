@@ -6,47 +6,22 @@ const ContactMe = () => {
   return (
     <div
       id='contact'
-      className=' mt-20 flex flex-col md:flex-row gap-4 justify-between p-5  bg-white w-full lg:w-[85%] m-auto rounded-xl'
+      className=' mt-20 pt-28 flex flex-col relative lg:flex-row lg:justify-center gap-4 items-center lg:items-start justify-between p-5  bg-white w-full lg:w-[95%] m-auto rounded-xl'
     >
-      <div className='w-full md:w-1/2'>
-        <h3 className='font-bold text-[52px] mb-2'>Contact</h3>
-
-        <div className='mb-5'>
-          There are many variations of passages of Lorem Ipsu available. but the
-          majority have suffered alte.
-        </div>
-        <div className='flex gap-2 my-4'>
-          <div className='w-[40px] h-[40px] grid place-content-center '>
-            <FaLocationDot size={30} />
-          </div>
-          <div>
-            <p>Address:</p>
-            <p className='font-bold'> Beverly Hills, CA, USA.</p>
-          </div>
-        </div>
-
-        <div className='flex gap-2 my-4'>
-          <div className='w-[40px] h-[40px] grid place-content-center '>
-            <AiOutlineMail size={30} />
-          </div>
-          <div>
-            <p>Email:</p>
-            <p className='font-bold'>adavs1@yahoo.com</p>
-          </div>
-        </div>
-
-        <div className='flex gap-2 my-4'>
-          <div className='w-[40px] h-[40px] grid place-content-center '>
-            <BsTelephoneFill size={30} />
-          </div>
-          <div>
-            <p>Phone:</p>
-            <p className='font-bold'>+1 949 372 9715</p>
-          </div>
-        </div>
+      <h3 className='font-semibold absolute top-6 mx-auto text-[32px] lg:text-[52px] leading-[56px] mb-2'>
+        Contact
+      </h3>
+      <div className='w-full text-center lg:text-left lg:w-1/2'>
+        <h3 className='font-semibold mx-auto text-[24px] lg:text-[40px] leading-[56px] mb-2'>
+          How can we help?
+        </h3>
+        <p className='mb-5 text-[20px] lg:text-[26px] lg:leading-[30px] lg:w-[80%]  leading-[20px]'>
+          Let’s start a conversation about how we can help you take control of
+          your project
+        </p>
       </div>
 
-      <div className='w-full borde h-[500px] border-black flex flex-col justify-between md:w-1/2'>
+      <div className='w-full  h-[500px] flex flex-col justify-between lg:w-1/2'>
         <div className='flex justify-between'>
           <input
             placeholder='Name*'
@@ -115,7 +90,7 @@ const ContactMe = () => {
             rows={5}
           ></textarea>
         </div>
-        <button className='flex w-full rounded-md justify-center items-center text-white bg-[#132238] p-3 gap-3'>
+        <button className='flex w-full rounded-md justify-center items-center text-white bg-[#8A232A] p-3 gap-3'>
           <span>Submit</span>
           <IoMdSend size={30} />
         </button>

@@ -17,6 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <head>
+        <link rel='icon' href='/favicon.png' />
+      </head>
       <body className={`${font.className}`}>
         <Navbar />
         <main className='flex min-h-screen [background:linear-gradient(180deg,rgb(255,247.03,238)_0%,rgba(174.45,174.45,174.45,0)_100%)] flex-col items-center justify-start '>

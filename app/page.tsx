@@ -9,23 +9,27 @@ import Link from "next/link";
 import useFonts from "@/hooks/useFonts";
 
 const socialImages = [
-  { img: "facebook", link: "" },
-  { img: "web", link: "" },
+  { img: "facebook", link: "https://facebook.com/malik.adaviriku" },
+  {
+    img: "linkedin",
+    link: "https://www.linkedin.com/in/dr-abdullahi-malik-adaviriku/",
+  },
+  { img: "twitter", link: "https://x.com/Hispedigree?s=20" },
   { img: "instagram", link: "" },
-  { img: "linkedin", link: "" },
 ];
 
-const Socials = ({ src }: { src: string }) => {
+const Socials = ({ src, link }: { src: string; link: string }) => {
   return (
-    <div
+    <Link
+      href={link}
       className={` ${
         src.includes("facebook") ? "bg-header-color" : "bg-white"
-      } w-12 h-12 p-[15px] rounded-[4px]`}
+      } hover:bg-pink-600 w-12 hover:cursor-pointer duration-300  h-12 p-[15px] rounded-[4px]`}
     >
-      <div className='w-[18px] cursor-pointer h-[18px] relative'>
+      <div className='w-[18px] hover:scale-110 duration-500  h-[18px] relative'>
         <Image fill alt='socials' src={src} />
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -52,6 +56,7 @@ export default function Home() {
               {socialImages.map((item, index: number) => {
                 return (
                   <Socials
+                    link={item.link}
                     src={`/assets/socials/${item.img}.svg`}
                     key={index.toString()}
                   />
@@ -92,12 +97,11 @@ export default function Home() {
         <ProfessionalA />
       </section>
       <section className='bg-[#F6F5F5] p-2'>
-        <div className='text-center'>
-          <h2 className=' font-bold text-[52px] py-10'>Interest</h2>
-          <p>
-            <strong>Politics Experience:</strong>
-            Aspirant for Senate House, 2019 Federal Republic of Nigeria,
-            Community service and environmental protection programs.
+        <div className='text-center '>
+          <h2 className=' font-semibold text-[52px] py-10'>Interest</h2>
+          <p className='w-[49%]  mx-auto break-all'>
+            Politics: Aspirant for Senate House, 2019 Federal Republic of
+            Nigeria, Community service and environmental protection programs.
           </p>
         </div>
 

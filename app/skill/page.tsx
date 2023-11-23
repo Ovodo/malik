@@ -41,7 +41,7 @@ const Page = () => {
     <div className='bg-white min-h-max w-full '>
       <h2
         style={poppins.style}
-        className='py-10 text-center mb-[50px] md:mb-[50px] leading-[56px] font-semibold text-[52px]'
+        className='text-center mb-[50px] mt-[35px] lg:mt-[56px] md:mb-[50px] leading-[56px] font-semibold text-[32px] lg:text-[52px]'
       >
         Skill
       </h2>
@@ -64,10 +64,10 @@ const Page = () => {
       <p className='text-body-color text-[20px] leading-[23.46px] w-full mx-auto mt-6 text-center font-medium'>
         English Language
       </p>
-      <section className='bg-header-color sm:px-[99px]  py-[67px] px-[20px] mt-[32px] w-full'>
+      <section className='bg-header-color sm:px-[99px]  py-[67px] sm:py-[72] lg:py-[99px] px-[20px] mt-[32px] w-full'>
         <h2
           style={poppins.style}
-          className='py-10 text-center text-white  leading-[56px] font-semibold text-[32px]'
+          className='text-center text-white lg:mb-[100px] mb-[56px]  leading-[56px] font-semibold text-[32px] lg:text-[52px]'
         >
           Education
         </h2>

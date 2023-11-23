@@ -66,6 +66,9 @@ body {
     rgb(var(--background-start-rgb)); */
   /* padding: 10px; */
 }
+.bord {
+  border: 4px solid black;
+}
 
 .list div:hover > .arrow {
   rotate: 540deg;
