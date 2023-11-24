@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
-import Hero from "@/public/assets/hero2.png";
+import Hero from "@/public/assets/personal/agbada.png";
+// import Hero from "@/public/assets/hero3.png";
 import useFonts from "@/hooks/useFonts";
 import { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -15,9 +16,11 @@ const AboutMe = () => {
   return (
     <section
       id='about-me'
-      className=' w-full relative  mx-auto flex flex-col justify-around items-center lg:items-start lg:flex-row py-10  lg:px-10'
+      className=' w-full relative h-full  mx-auto flex flex-col justify-around items-center lg:items-start lg:flex-row py-10  lg:px-10'
     >
-      <Image src={Hero} alt='' />
+      <div className='relative min-h-[600px] w-[50%]'>
+        <Image className='object-contain' fill src={Hero} alt='' />
+      </div>
 
       <div className='lg:w-[50%]  w-full  p-6'>
         <h4
