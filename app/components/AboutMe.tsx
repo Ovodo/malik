@@ -16,7 +16,7 @@ const AboutMe = () => {
   return (
     <section
       id='about-me'
-      className=' w-full relative h-full  mx-auto flex flex-col justify-around items-center lg:items-start lg:flex-row py-10  lg:px-10'
+      className=' w-full relative h-full  mx-auto flex flex-col justify-around items-center lg:items-start lg:flex-row-reverse  py-10  lg:px-10'
     >
       <div className='relative min-h-[600px] w-[50%]'>
         <Image className='object-contain' fill src={Hero} alt='' />
