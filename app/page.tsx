@@ -107,7 +107,7 @@ export default function Home() {
           <h2 style={libre.style} className=' font-semibold text-[34px] py-5'>
             Interest
           </h2>
-          <p style={poppins.style} className='w-[59%] text-[18px]  mx-auto'>
+          <p style={poppins.style} className='lg:w-[59%] text-[18px]  mx-auto'>
             Politics: Aspirant for Senate House, 2019 Federal Republic of
             Nigeria, Community service and environmental protection programs.
           </p>
