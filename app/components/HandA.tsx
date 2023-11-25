@@ -15,7 +15,7 @@ const awards = [
 const HandA = () => {
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
   const [currentIndex, setCurrentIndex] = useState(2);
-  const { poppins } = useFonts();
+  const { poppins, libre } = useFonts();
 
   // useEffect(() => {
   //   const intervalId = setInterval(() => {
@@ -77,8 +77,8 @@ const HandA = () => {
       className='flex  flex-col gap-10 pb-12 md:px-20 m-auto bg-white overflow-hidden'
     >
       <h2
-        style={poppins.style}
-        className='text-center pt-[28px] font-semibold text-[32px] leading-[56px] lg:text-[52px]'
+        style={libre.style}
+        className='text-center pt-[28px] font-semibold text-[34px]'
       >
         Honors And Awards
       </h2>
@@ -88,7 +88,7 @@ const HandA = () => {
             key={index}
             className={`absolute md:w-[25%] w-[80%] rounded-[20px] ${
               positions[positionIndexes[index]]
-            } py-10`}
+            } py-12`}
             animate={positions[positionIndexes[index]]}
             variants={imageVariants}
             transition={{ duration: 0.5 }}
@@ -96,8 +96,10 @@ const HandA = () => {
             dragConstraints={{ left: 0, right: 0 }}
             onDragEnd={handleDragEnd}
           >
-            <Image src={AwardImg} alt='' className='w-full' />
-            <p className='p-3 font-semibold'>{text}</p>
+            <Image src={AwardImg} alt='' className='relative bottom-5 w-full' />
+            <p style={poppins.style} className='p-3 text-[18px] font-semibold'>
+              {text}
+            </p>
           </motion.div>
         ))}
       </div>

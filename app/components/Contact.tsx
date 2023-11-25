@@ -2,20 +2,32 @@ import { FaLocationDot } from "react-icons/fa6";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephoneFill } from "react-icons/bs";
 import { IoMdSend } from "react-icons/io";
+import useFonts from "@/hooks/useFonts";
 const ContactMe = () => {
+  const { poppins, libre } = useFonts();
+
   return (
     <div
       id='contact'
       className=' mt-20 pt-28 flex flex-col relative lg:flex-row lg:justify-center gap-4 items-center lg:items-start justify-between p-5  bg-white w-full lg:w-[95%] m-auto rounded-xl'
     >
-      <h3 className='font-semibold absolute top-6 mx-auto text-[32px] lg:text-[52px] leading-[56px] mb-2'>
+      <h3
+        style={libre.style}
+        className='font-semibold absolute top-6 mx-auto text-[34px]  mb-2'
+      >
         Contact
       </h3>
       <div className='w-full text-center lg:text-left lg:w-1/2'>
-        <h3 className='font-semibold mx-auto text-[24px] lg:text-[40px] leading-[56px] mb-2'>
+        <h3
+          style={libre.style}
+          className='font-semibold mx-auto text-[22px] mb-2'
+        >
           How can we help?
         </h3>
-        <p className='mb-5 text-[20px] lg:text-[26px] lg:leading-[30px] lg:w-[80%]  leading-[20px]'>
+        <p
+          style={poppins.style}
+          className='mb-5 text-[18px]  lg:leading-[28px] lg:w-[80%]'
+        >
           Let’s start a conversation about how we can help you take control of
           your project
         </p>

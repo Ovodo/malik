@@ -1,10 +1,11 @@
 import React from "react";
-import { Poppins } from "next/font/google";
+import { Poppins, Montserrat, Libre_Baskerville } from "next/font/google";
 
-const poppins = Poppins({ weight: ["600"], subsets: ["devanagari"] });
+const poppins = Montserrat({ subsets: ["latin"] });
+const libre = Libre_Baskerville({ weight: ["400", "700"], subsets: ["latin"] });
 
 const useFonts = () => {
-  return { poppins };
+  return { poppins, libre };
 };
 
 export default useFonts;

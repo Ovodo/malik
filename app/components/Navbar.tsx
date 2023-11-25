@@ -2,44 +2,31 @@
 import React, { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import { MdClose } from "react-icons/md";
-import { RiArrowDropDownLine } from "react-icons/ri";
-//import { RiArrowDropUpLine } from "react-icons/ri";
-import SubMenu from "./Submenu";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/public/assets/aw17.png";
+import useFonts from "@/hooks/useFonts";
 
 const listStyle: string =
-  "text-[16px] min-h-max   leading-[16px] list relative cursor-pointer hover:opacity- duration-200  flex flex-col items-center my-[14px] lg:mb-0 mt-[40px] lg:mt-0 md:text-[20px] lg:leading-[20px] text-[#132238] font-semibold";
-const skills = [
-  { title: "Skill", link: "skill" },
-  { title: "Education", link: "#Education" },
-  // { title: "Certification/License", link: "#Certification" },
-];
-const work = [
-  { title: "Work", link: "Experience" },
-  { title: "Professional", link: "#Professional" },
-  { title: "Volunteer", link: "#Volunteer" },
-  { title: "Research", link: "#Research" },
-];
+  "text-[16px] min-h-max hover:scale-110  leading-[16px] list relative cursor-pointer hover:opacity- duration-200  flex flex-col items-center my-[14px] lg:mb-0 mt-[40px] lg:mt-0 md:text-[18px] lg:leading-[20px] text-[#132238] font-medium";
+
 const Navbar = () => {
   // --------------------------------------------VARIABLES
   const [isOpen, setIsOpen] = useState(false);
-  const [submenu, setSubmenu] = useState(0);
-  // const Arrow = isOpen;
+  const { poppins } = useFonts();
 
   //-----------------------------------------------------------FUNCTIONS
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  const togglesubMenu = (index: number) => {
-    setSubmenu(index);
-  };
 
   //------------------------------------------------------------------USE EFFECTS
 
   return (
-    <div className='relative shadow-sm w-full shadow-slate-300 z-20   flex items-center lg:justify-around bg-white h-[12vh] lg:h-[12vh]'>
+    <div
+      style={poppins.style}
+      className='relative    shadow-sm w-full shadow-slate-300 z-20   flex items-center lg:justify-around bg-white h-[12vh] lg:h-[12vh]'
+    >
       <Link
         href={"/"}
         className='relative ml-5 lg:ml-0 w-[37px] h-[67px] lg:w-[37px] lg:h-[67px]'
@@ -72,15 +59,17 @@ const Navbar = () => {
           </Link>
         </li>
         <Link
+          style={poppins.style}
           href={"/#contact"}
-          className='px-5 py-4 absolute lg:relative lg:hidden flex top-[60vh] lg:top-0  ml-[12px] lg:mr-[  14px] font-semibold text-[20px] tracking-[var(--header-letter-spacing)] [font-style:var(--header-font-style)] leading-[var(--header-line-height)] text-white bg-header-color rounded-md'
+          className='px-5 py-4 absolute lg:relative lg:hidden flex top-[60vh] lg:top-0  ml-[12px] lg:mr-[  14px] font-semibold text-[18px] tracking-[var(--header-letter-spacing)] [font-style:var(--header-font-style)] leading-[var(--header-line-height)] text-white bg-header-color rounded-md'
         >
           Contact
         </Link>
       </ul>
       <Link
+        style={poppins.style}
         href={"/#contact"}
-        className='px-5 py-4 absolute lg:relative lg:flex hidden top-[60vh] md:top-0  ml-[12px] md:mr-[  14px] font-semibold text-[20px] tracking-[var(--header-letter-spacing)] [font-style:var(--header-font-style)] leading-[var(--header-line-height)] text-white bg-header-color rounded-md'
+        className='px-5 py-4 absolute lg:relative lg:flex hidden top-[60vh] md:top-0  ml-[12px] md:mr-[  14px] font-semibold text-[18px] tracking-[var(--header-letter-spacing)] [font-style:var(--header-font-style)] leading-[var(--header-line-height)] text-white bg-header-color rounded-md'
       >
         Contact
       </Link>

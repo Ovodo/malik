@@ -75,7 +75,7 @@ const volExp = [
 ];
 
 export default function Experience() {
-  const { poppins } = useFonts();
+  const { poppins, libre } = useFonts();
   const [truncate, setTruncate] = useState(true);
   const [index, setIndex] = useState(0);
 
@@ -88,8 +88,8 @@ export default function Experience() {
     <div className='[background:linear-gradient(180deg,rgb(245.64,244.61,244.61)_0%,rgba(174.45,174.45,174.45,0)_100%)]'>
       <section className='bg-whit'>
         <h2
-          style={poppins.style}
-          className={`mt-[56px] mb-[50px] text-[32px] leading-[56px]  font-bold sm:text-[48px] lg:text-[52px] lg:mt-[60px] lg:mb-[100px] text-center`}
+          style={libre.style}
+          className={`mt-[56px] mb-[50px] text-[34px]  font-semibold  lg:mt-[60px] lg:mb-[100px] text-center`}
         >
           Work Experience
         </h2>
@@ -98,22 +98,22 @@ export default function Experience() {
             <div
               key={i.toString()}
               className={` ${
-                !truncate && index === i ? "min-h-max" : "h-[600px]"
-              }  justify-start sm:p-[32px] pt-2 pb-10 relative pl-[30px] pr-[26px] border-l-yellow-400 shadow-[0_2px_10px_rgba(28,25,25,0.16)]  border-l-4 sm:h-[750px] lg:h-[500px] bg-white rounded-lg  flex flex-col sm:justify-center gap-4  mb-[50px]`}
+                !truncate && index === i ? "min-h-max" : "min-h-[350px]"
+              }  justify-start sm:p-[32px] pt-2 pb-10 relative pl-[30px] pr-[26px] border-l-yellow-400 shadow-[0_2px_10px_rgba(28,25,25,0.16)]  border-l-4 min-h-[350px] bg-white rounded-lg  flex flex-col sm:justify-center gap-4  mb-[50px]`}
             >
-              <h3 className='font-semibold break-all text-[22px] leading-[22px] lg:text-[28px] lg:leading-[28px]'>
+              <h3 className='font-semibold break-all text-[20px] leading-[28px]'>
                 {exp.head}
               </h3>
-              <p className=' text-[20px] hidden sm:flex lg:text-[24px]  leading-[30px]'>
+              <p className=' text-[18px] hidden sm:flex   leading-[30px]'>
                 {exp.text}
               </p>
-              <p className=' text-[20px] sm:hidden lg:text-[24px]  leading-[30px]'>
+              <p className=' text-[18px] sm:hidden   leading-[28px]'>
                 {!truncate && index === i
                   ? exp.text
                   : exp.text.slice(0, 250).concat("...")}
               </p>
               {exp.li_1 && (
-                <ul className='list-disc ml-4 hidden sm:flex sm:flex-col space-y-3 text-[20px] lg:text-[22px] leading-[30px]'>
+                <ul className='list-disc ml-4 hidden sm:flex sm:flex-col space-y-3 text-[16px]  leading-[22px]'>
                   <li>{exp.li_1}</li>
                   <li>{exp.li_2}</li>
                   <li>{exp.li_3}</li>
@@ -121,7 +121,7 @@ export default function Experience() {
               )}
               <div className='sm:hidden'>
                 {exp.li_1 && !truncate && index === i && (
-                  <ul className='list-disc flex flex-col sm:hidden space-y-3 text-[20px] lg:text-[26px] leading-[30px]'>
+                  <ul className='list-disc flex flex-col sm:hidden space-y-3 text-[16px] leading-[22px]'>
                     <li>{exp.li_1}</li>
                     <li>{exp.li_2}</li>
                     <li>{exp.li_3}</li>
@@ -132,7 +132,7 @@ export default function Experience() {
               <div className='flex sm:hidden absolute bottom-1 right-2 self-end items-center space-x-3'>
                 <p
                   style={poppins.style}
-                  className='font-semibold text-[22px] leading-[22px]'
+                  className='font-semibold text-[18px] leading-[22px]'
                 >
                   Read more...
                 </p>
@@ -154,8 +154,8 @@ export default function Experience() {
 
       <section className='sm:w-[90%] sm:mx-[32px]'>
         <h2
-          style={poppins.style}
-          className='font-semibold text-[32px] w-[205px] sm:w-[577px] mx-auto leading-[56px] mt-[16px] mb-[50px] text-center'
+          style={libre.style}
+          className='font-semibold text-[34px] w-[205px] sm:w-[577px] mx-auto  mt-[16px] mb-[50px] text-center'
         >
           Professional Experience
         </h2>
@@ -166,15 +166,15 @@ export default function Experience() {
               className=' border-t-2  border-t-gray-800 pt-[20px] flex flex-col gap-3 w-[320px]'
             >
               <h3
-                style={poppins.style}
-                className='font-semibold text-[22px] leading-[28px]'
+                style={libre.style}
+                className='font-medium text-[22px] leading-[28px]'
               >
                 {exp.head}
               </h3>
               {exp.head2 && (
                 <h3
-                  style={poppins.style}
-                  className='font-semibold mt-2 text-[22px] leading-[30px]'
+                  style={libre.style}
+                  className='font-medium mt-2 text-[22px] leading-[30px]'
                 >
                   {exp.head2}
                 </h3>
@@ -190,7 +190,10 @@ export default function Experience() {
         </div>
       </section>
       <section className='bg-[#424E60] w-full px-[24px] pt-[31px] sm:pt-[72px] lg:pb-[124px]'>
-        <h2 className='font-semibold w-[176px] sm:w-[560px] mx-auto text-[32px] leading-[56px]    lg:mt-[110px] mb-[50px] text-white  text-center'>
+        <h2
+          style={libre.style}
+          className='font-semibold w-[176px] sm:w-[560px] mx-auto text-[34px]  mb-[50px] text-white  text-center'
+        >
           Volunteer Experience
         </h2>
         <div className='w-full m-auto  grid grid-col-1 md:grid-cols-2 place-items-center  gap-4'>
@@ -199,10 +202,10 @@ export default function Experience() {
               key={i}
               className='border-l-yellow-400 border-l-4 bg-white rounded-lg lg:w-[640px]  sm:w-[345px] w-[365px] h-[365px] justify-center p-10 flex flex-col gap-3 mb-4'
             >
-              <h3 className='font-semibold text-[28px] leading-[28px]'>
+              <h3 className='font-medium text-[22px] leading-[28px]'>
                 {exp.head}
               </h3>
-              <p className='text-[16px] leading-[20px]'>{exp.text}</p>
+              <p className='text-[18px] leading-[24px]'>{exp.text}</p>
             </div>
           ))}
         </div>

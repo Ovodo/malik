@@ -29,13 +29,16 @@ const volExp = [
 ];
 
 const Page = () => {
-  const { poppins } = useFonts();
+  const { poppins, libre } = useFonts();
   const [truncate, setTruncate] = useState(true);
   const [truncate2, setTruncate2] = useState(true);
   return (
     <>
       <section className='bg-body-color h-full w-full px-[10px] lg:pb-[124px]'>
-        <h2 className='font-semibold w-[176px] sm:w-[560px] mx-auto text-[32px] leading-[56px] mt-[31px] mb-[50px] text-white  text-center'>
+        <h2
+          style={libre.style}
+          className='font-semibold w-[176px] sm:w-[560px] mx-auto text-[34px]  mt-[31px] mb-[50px] text-white  text-center'
+        >
           Research and Articles
         </h2>
         <div className='w-full m-auto h-[80%] flex flex-col justify-between gap-4  mb-4'>
@@ -64,8 +67,8 @@ const Page = () => {
       </section>
       <section className=' bg-white mb-3'>
         <h2
-          style={poppins.style}
-          className='font-semibold w-[321px] sm:w-full mx-auto mt-[40px] mb-[50px] text-[32px] leading-[56px] text-center'
+          style={libre.style}
+          className='font-semibold w-[321px] sm:w-full mx-auto mt-[40px] mb-[50px] text-[34px] text-center'
         >
           Research Experience
         </h2>
@@ -75,7 +78,7 @@ const Page = () => {
               <div className='flex  absolute bottom-1 right-2 self-end items-center space-x-3'>
                 <p
                   style={poppins.style}
-                  className='font-semibold text-[22px] leading-[22px]'
+                  className='font-semibold text-[18px] leading-[22px]'
                 >
                   {truncate ? "Read more..." : "Read less"}
                 </p>
@@ -90,22 +93,23 @@ const Page = () => {
               </div>
               <h2
                 style={poppins.style}
-                className='font-semibold w-[380px] sm:w-[320px] lg:w-full  mb-[20px] text-[22px] sm:text-[28px] sm:leading-[28px] leading-[22px]'
+                className='font-semibold w-[380px] sm:w-[320px] lg:w-full  mb-[20px] text-[22px]  leading-[28px]'
               >
                 Westcliff University/ Department of Business
                 Administration/Irvine, CA, USA Doctoral Student 2017-2022
               </h2>
-              <h3 className='text-[20px] leading-[30px] font-normal mb-[30px]'>
-                Dissertation Chairman: Professor Elsayess Mahmood: Ph.D., PMP,
-                MCS. Methodologist: Professor Simin Hojat, Ph.D. Subject Matter
-                Expert: Professor Omar Haddad DBA Program Chair: Professor Alex
-                Sherm Doctoral Dissertation: Integrating Blockchain into
-                Electronic Stamp Duty Collections (A Case Study).
+              <h3 className='text-[18px] leading-[30px] font-normal mb-[30px]'>
+                <strong className='font-medium'>Dissertation Chairman: </strong>
+                Professor Elsayess Mahmood: Ph.D., PMP, MCS. Methodologist:
+                Professor Simin Hojat, Ph.D. Subject Matter Expert: Professor
+                Omar Haddad DBA Program Chair: Professor Alex Sherm Doctoral
+                Dissertation: Integrating Blockchain into Electronic Stamp Duty
+                Collections (A Case Study).
               </h3>
-              <h2 className='font-medium text-[20px] sm:text-[28px] sm:leading-[24px]  leading-[23.46px] mb-[15px]'>
+              <h2 className='font-medium text-[20px] leading-[28px] mb-[15px]'>
                 Brief description of Project
               </h2>
-              <p className='font-normal text-[17px] leading-[24px]'>
+              <p className='font-normal text-[18px] leading-[24px]'>
                 In this scholarly presentation, I embark on an immersive journey
                 into the heart of a profound financial syndicate fraud that has
                 cast a shadow over Nigeria&apos;s banking landscape. This
@@ -121,7 +125,7 @@ const Page = () => {
               <br />
               {!truncate && (
                 <div>
-                  <b className='font-medium text-[18px] leading-[24px]'>
+                  <b className='font-medium text-[20px] leading-[24px]'>
                     Unveiling the Fraud Landscape:
                   </b>
                   <p className='text-[18px] leading-[24px]'>
@@ -144,10 +148,10 @@ const Page = () => {
                   </p>
                   <br />
                   <br />
-                  <b className='font-medium text-[18px] leading-[24px]'>
+                  <b className='font-medium text-[20px] leading-[24px]'>
                     Understanding the &quot;How&quot; and &quot;Methods&quot;:
                   </b>{" "}
-                  <p>
+                  <p className='text-[18px]'>
                     Central to my academic endeavor is a comprehensive
                     understanding of the modus operandi adopted by the
                     syndicate. I meticulously dissect the intricate methods
@@ -159,10 +163,10 @@ const Page = () => {
                   </p>
                   <br />
                   <br />
-                  <b className='font-medium text-[18px] leading-[24px]'>
+                  <b className='font-medium text-[20px] leading-[24px]'>
                     Causal Factors and Root Analysis:
                   </b>{" "}
-                  <p>
+                  <p className='text-[18px]'>
                     Beyond the surface intricacies, I venture into the realm of
                     causal factors, delving into the underlying socioeconomic,
                     regulatory, and ethical considerations that paved the way
@@ -173,10 +177,10 @@ const Page = () => {
                   </p>
                   <br />
                   <br />
-                  <b className='font-medium text-[18px] leading-[24px]'>
+                  <b className='font-medium text-[20px] leading-[24px]'>
                     A Pioneering Solution:
                   </b>{" "}
-                  <p>
+                  <p className='text-[18px]'>
                     Charting a Path Forward: With insights gleaned from my
                     meticulous examination, I proudly present an innovative and
                     near-permanent solution to mitigate the looming specter of
@@ -191,10 +195,10 @@ const Page = () => {
                   </p>
                   <br />
                   <br />
-                  <b className='font-medium text-[18px] leading-[24px]'>
+                  <b className='font-medium text-[20px] leading-[24px]'>
                     Proposal:
                   </b>{" "}
-                  <p>
+                  <p className='text-[18px]'>
                     An innovative proposition of integrating a centralized
                     database system with cutting-edge blockchain technology.
                     This visionary blockchain system, fortified by cryptographic
@@ -215,10 +219,10 @@ const Page = () => {
                   </p>
                   <br />
                   <br />
-                  <b className='font-medium text-[18px] leading-[24px]'>
+                  <b className='font-medium text-[20px] leading-[24px]'>
                     Conclusion:
                   </b>{" "}
-                  <p>
+                  <p className='text-[18px]'>
                     Nigeria was a case study, but the proposal applies worldwide
                     to fraud-proof electronic tax collection processes.
                   </p>
@@ -231,7 +235,7 @@ const Page = () => {
             <div className='flex sm:hidden  absolute bottom-1 right-2 self-end items-center space-x-3'>
               <p
                 style={poppins.style}
-                className='font-semibold text-[22px] leading-[22px]'
+                className='font-semibold text-[18px] leading-[22px]'
               >
                 {truncate2 ? "Read more..." : "Read less"}
               </p>
@@ -246,27 +250,30 @@ const Page = () => {
             </div>
             <h2
               style={poppins.style}
-              className='font-semibold w-[380px] lg:w-full mb-[20px] mt-[50px] sm:mt-[0px] sm:text-[28px] sm:leading-[28px] text-[22px] leading-[22px]'
+              className='font-semibold w-[380px] lg:w-full mb-[20px] mt-[50px] sm:mt-[0px] text-[22px] leading-[28px]'
             >
               Coventry University, London Campus/Department of Business
               Administration/London, UK
             </h2>
             <h3 className='text-[20px] leading-[30px] font-normal mb-[30px]'>
-              Consulting Fellow 2015 -2016 Mentor: Doctor Beeker (Ph.D., MEI,
-              MCMI, FHEA, FRSA). Project Title: “Developing Entry Strategy into
-              the South American and the Caribbean Oil and Gas Market.”
+              <strong className='font-medium'>
+                Consulting Fellow 2015 -2016 Mentor:{" "}
+              </strong>{" "}
+              Doctor Beeker (Ph.D., MEI, MCMI, FHEA, FRSA). Project Title:
+              “Developing Entry Strategy into the South American and the
+              Caribbean Oil and Gas Market.”
             </h3>
-            <h2 className='font-medium text-[20px] leading-[23.46px] sm:text-[28px] sm:leading-[24px]  mt-[30px] mb-[15px]'>
+            <h2 className='font-medium text-[20px] leading-[24px]  mt-[30px] mb-[15px]'>
               Tasks
             </h2>
-            <p className='text-[17px] leading-[24px]'>
+            <p className='text-[18px] leading-[24px]'>
               Conducted extensive research to identify market entry strategies
               into South America and the Caribbean region and made categorized
               recommendations for Genesis Oil and Gas.
             </p>
             <br />
             <br />
-            <b className='font-medium text-[18px] leading-[24px]'>
+            <b className='font-medium text-[20px] leading-[24px]'>
               Short-term:
             </b>{" "}
             Projects in the production phase are under five years old.
@@ -279,7 +286,7 @@ const Page = () => {
             <br />
             <br />
             <div className='hidden sm:flex sm:flex-col'>
-              <b className='font-medium text-[18px] leading-[24px]'>
+              <b className='font-medium text-[20px] leading-[24px]'>
                 Mid-term:
               </b>{" "}
               Projects in the development phase are 5 – 10 years old. Mid-term
@@ -292,7 +299,7 @@ const Page = () => {
               expertise, to join the projects.
               <br />
               <br />
-              <b className='font-medium text-[18px] leading-[24px]'>
+              <b className='font-medium text-[20px] leading-[24px]'>
                 Long-term:
               </b>{" "}
               Prospective projects are for more than ten years. According to PWC
@@ -315,7 +322,7 @@ const Page = () => {
             </div>
             {!truncate2 && (
               <div>
-                <b className='font-medium text-[18px] leading-[24px]'>
+                <b className='font-medium text-[20px] leading-[24px]'>
                   Mid-term:
                 </b>{" "}
                 Projects in the development phase are 5 – 10 years old. Mid-term
@@ -328,7 +335,7 @@ const Page = () => {
                 its area of expertise, to join the projects.
                 <br />
                 <br />
-                <b className='font-medium text-[18px] leading-[24px]'>
+                <b className='font-medium text-[20px] leading-[24px]'>
                   Long-term:
                 </b>{" "}
                 Prospective projects are for more than ten years. According to

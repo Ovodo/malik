@@ -36,12 +36,12 @@ const Education = [
 ];
 
 const Page = () => {
-  const { poppins } = useFonts();
+  const { poppins, libre } = useFonts();
   return (
     <div className='bg-white min-h-max w-full '>
       <h2
-        style={poppins.style}
-        className='text-center mb-[50px] mt-[35px] lg:mt-[56px] md:mb-[50px] leading-[56px] font-semibold text-[32px] lg:text-[52px]'
+        style={libre.style}
+        className='text-center mb-[50px] mt-[35px] lg:mt-[56px] md:mb-[50px]  font-semibold text-[34px]'
       >
         Skill
       </h2>
@@ -56,7 +56,7 @@ const Page = () => {
         ))}
       </div>
       <h4
-        style={poppins.style}
+        style={libre.style}
         className='text-[22px] leading-[22px] text-center w-full'
       >
         Language
@@ -66,8 +66,8 @@ const Page = () => {
       </p>
       <section className='bg-header-color sm:px-[99px]  py-[67px] sm:py-[72] lg:py-[99px] px-[20px] mt-[32px] w-full'>
         <h2
-          style={poppins.style}
-          className='text-center text-white lg:mb-[100px] mb-[56px]  leading-[56px] font-semibold text-[32px] lg:text-[52px]'
+          style={libre.style}
+          className='text-center text-white lg:mb-[100px] mb-[56px]  leading-[56px] font-semibold text-[34px]'
         >
           Education
         </h2>

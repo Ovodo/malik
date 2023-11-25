@@ -34,23 +34,26 @@ const Socials = ({ src, link }: { src: string; link: string }) => {
 };
 
 export default function Home() {
-  const { poppins } = useFonts();
+  const { poppins, libre } = useFonts();
   return (
     <div className='w-full h-max '>
       <section
         id='hero'
-        className='m-auto w-full lg:py-10 pb-0  flex flex-col  sm:pt-[20px] pt-[10px] gap-3 md:flex-row  lg:h-[802px]  relative  justify-between items-center'
+        className='m-auto  w-full lg:py-10 pb-0  flex flex-col  sm:pt-[20px] pt-[10px] gap-3 md:flex-row  lg:h-[802px]  relative  justify-between items-center'
       >
         <div className='min-h-[700px] sm:h-[950px] lg:h-full  lg:max-h-max flex flex-col justify-between lg:justify-center  z-10 ml-5 sm:ml-[32px]'>
           <h4
-            style={poppins.style}
-            className=' w-full lg:mb-10  font-semibold flex flex-col text-header-color text-[32px] sm:text-[58px] leading-[42px] sm:leading-[52px] lg:text-[48px] tracking-[0] lg:leading-[56px]'
+            style={libre.style}
+            className=' w-full lg:mb-10  font-semibold flex flex-col text-header-color text-[34px] leading-[42px]  tracking-[0]'
           >
-            Dr. Eng. Malik Abdullahi{" "}
-            <span className='text-[20px] sm:text-[32px] '>FIMC, CMC</span>
+            Dr. Eng. Malik Abdullahi
+            <span className='text-[18px]  '>FIMC, CMC</span>
           </h4>
           <div className='lg:space-y-10 space-y-6'>
-            <p className=" mb-5 flex flex-col sm:w-[500px] [font-family:'Poppins-Regular',Helvetica] lg:w-[645px] font-normal text-body-color text-[32px] leading-[48px] md:text-[36px] tracking-[0] md:leading-[54px]">
+            <p
+              style={libre.style}
+              className=' mb-5 flex flex-col sm:w-[500px]  lg:w-[645px] font-normal text-body-color text-[18px] leading-[24px] md:text-[18px] tracking-[0] md:leading-[24px]'
+            >
               <span>Founder & CEO</span>
               <span>Unique Group</span>
               <span>Beverly Hills, CA, USA</span>
@@ -68,7 +71,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='absolute  top-[100px] sm:absolute  sm:top-[130px] right-0 lg:relative lg:right-0 lg:top-0 w-[251px] h-[367px] sm:w-[385.43px] sm:h-[561px]  lg:w-[482px]  lg:h-[802px]'>
+        <div className='absolute  top-[150px] sm:absolute  sm:top-[130px] right-0 lg:relative lg:right-0 lg:top-0 w-[251px] h-[367px] sm:w-[385.43px] sm:h-[561px]  lg:w-[482px]  lg:h-[802px]'>
           <Image
             fill
             priority
@@ -86,11 +89,11 @@ export default function Home() {
             alt='hero'
             quality={100}
           />
-          <div className='w-[99vw]  h-full lg:w-[732px]  absolute bottom-0 right-[0px]  bg-[#8A232A]' />
+          <div className='w-[99vw]  h-full lg:w-[732px]   absolute bottom-0 right-[0px]  bg-[#8A232A]' />
         </div>
       </section>
 
-      <section className='mt-10'>
+      <section className='mt-10 lg:mt-0'>
         <HandA />
       </section>
       <section>
@@ -101,8 +104,10 @@ export default function Home() {
       </section>
       <section className='bg-[#F6F5F5] p-2'>
         <div className='text-center '>
-          <h2 className=' font-semibold text-[52px] py-10'>Interest</h2>
-          <p className='w-[49%]  mx-auto break-all'>
+          <h2 style={libre.style} className=' font-semibold text-[34px] py-5'>
+            Interest
+          </h2>
+          <p style={poppins.style} className='w-[59%] text-[18px]  mx-auto'>
             Politics: Aspirant for Senate House, 2019 Federal Republic of
             Nigeria, Community service and environmental protection programs.
           </p>

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Work_Sans } from "next/font/google";
+import { Work_Sans, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-const font = Work_Sans({ subsets: ["latin"] });
+const font = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Dr. Malik Abdullahi Adaviriku",
@@ -26,7 +26,7 @@ export default function RootLayout({
           {children}
         </main>
         <footer className='grid place-content-center min-h-[20vh] text-white bg-gray-800'>
-          <div className='text-center'>Copyright © 2023 .</div>
+          <div className='text-center text-[16px]'>Copyright © 2023 .</div>
         </footer>
       </body>
     </html>
