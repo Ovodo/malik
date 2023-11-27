@@ -14,15 +14,16 @@ const awards = [
 const HandA = () => {
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
   const [currentIndex, setCurrentIndex] = useState(2);
+  const [stopScroll, setStopScroll] = useState(false);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if(stopScroll) return
+      handleDragEnd({}, {offset:{x:300}})
+    }, 5000);
 
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     handleDragEnd({}, {offset:{x:300}})
-  //   }, 5000);
-
-  //   // Clear the interval when the component unmounts or on cleanup
-  //   return () => clearInterval(intervalId);
-  // }, [])
+    // Clear the interval when the component unmounts or on cleanup
+    return () => clearInterval(intervalId);
+  }, [stopScroll])
 
   const handleNext = () => {
     setPositionIndexes((prevIndexes) => {
@@ -30,6 +31,7 @@ const HandA = () => {
         (prevIndex) => (prevIndex + 1) % 5
       );
 
+      
       const setNewIndex = currentIndex >= 4 ? 1 : currentIndex + 1;
       setCurrentIndex(setNewIndex);
 
@@ -50,7 +52,7 @@ const HandA = () => {
   };
 
   const positions = ["center", "left1", "left", "right", "right1"];
-
+  const color = ["center", "left1", "left", "right", "right1"];
   const imageVariants = {
     center: { x: "0%", scale: 1, zIndex: 5 },
     left1: { x: "-50%", scale: 0.7, zIndex: 3 },
@@ -62,13 +64,20 @@ const HandA = () => {
     //console.log(currentIndex, info)
     const swipeThreshold = 40;
     if (info?.offset?.x > swipeThreshold) {
+      console.log(currentIndex, 'f')
       handleNext();
     } else if (info?.offset?.x < -swipeThreshold) {
+      console.log(currentIndex, 'b')
       handleBack();
     } else {
+      console.log(currentIndex, 'm')
       handleNext();
     }
   };
+
+  const onSlideClick = (index: number) => {
+    setStopScroll(!stopScroll)
+  }
   return (
     <div
       id='handa'
@@ -82,7 +91,7 @@ const HandA = () => {
           <motion.div
             key={index}
             className={`absolute md:w-[25%] w-[80%] rounded-[20px] ${
-              positions[positionIndexes[index]]
+              color[index]
             } py-10`}
             animate={positions[positionIndexes[index]]}
             variants={imageVariants}
@@ -90,6 +99,7 @@ const HandA = () => {
             drag='x'
             dragConstraints={{ left: 0, right: 0 }}
             onDragEnd={handleDragEnd}
+            onClick={()=>onSlideClick(index)}
           >
             <Image src={AwardImg} alt='' className='w-full' />
             <p className='p-3 font-bold mt-10'>{text}</p>

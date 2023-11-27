@@ -10,11 +10,10 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rg: 214, 219, 220;
-  --background-start-rgb: 254, 234, 211;
+  --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --body-color: rgba(66, 78, 96, 1);
-  --body-font-family: "Montserrat", sans-serif;
+  --body-font-family: "WorkSans-Regular", Helvetica;
   --body-font-size: 26px;
   --body-font-style: normal;
   --body-font-weight: 400;
@@ -58,21 +57,12 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
+  background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb)); */
-  /* padding: 10px; */
-  font-family: "Montserrat", sans-serif;
-}
-.bord {
-  border: 4px solid black;
-}
-.nav {
-  font-family: Montserrat, sans-serif;
-  font-size: 18px;
+    rgb(var(--background-start-rgb));
 }
 
 .list div:hover > .arrow {
@@ -117,25 +107,25 @@ body {
 /*"center", "left1", "left", "right", "right1"*/
 
 .center {
-  background: #ece6dc;
+  background: #fcc028;
 }
 
 .left {
-  background: #35353d;
+  background: #28293e;
   color: white;
 }
 
 .right1 {
-  background: #aaaaaa;
+  background: #ef6d58;
 }
 
 .right {
-  background: #adafc9;
+  background: #28293e;
   color: white;
 }
 
 .left1 {
-  background: #aaaaaa;
+  background: #ef6d58;
 }
 .skillCard {
   width: 361px;
