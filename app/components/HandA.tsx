@@ -3,35 +3,26 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import AwardImg from "@/public/assets/awa.png";
-import useFonts from "@/hooks/useFonts";
 
 const awards = [
-  `TEXT 1`,
-  `TEXT 2`,
-  `TEXT 3`,
-  `TEXT 4`,
-  `TEXT 5`,
+  `National Scholarship for Free Secondary Education, Federal Government of Nigeria, 1986`,
+  `Fellow @Institute of Chartered Management Consultants`,
+  `Best graduating Mathematic Senior Secondary School Student, 1992`,
+  `Fellow @Institute of Leadership, Entrepreneurship, and Corporate Governance`,
+  `Management Consultant with Distinction in Time Management (London Graduate School).`,
 ];
 const HandA = () => {
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
   const [currentIndex, setCurrentIndex] = useState(2);
-  const { poppins, libre } = useFonts();
-  const [stopslide, setStopSlide] = useState(false)
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      if (stopslide) {
-       return // console.log(stopslide)
-      } else {
-       // console.log('work',stopslide)
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     handleDragEnd({}, {offset:{x:300}})
+  //   }, 5000);
 
-       handleDragEnd({}, {offset:{x:300}})
-      }
-    }, 3000);
-
-    // Clear the interval when the component unmounts or on cleanup
-    return () => clearInterval(intervalId);
-  }, [stopslide])
+  //   // Clear the interval when the component unmounts or on cleanup
+  //   return () => clearInterval(intervalId);
+  // }, [])
 
   const handleNext = () => {
     setPositionIndexes((prevIndexes) => {
@@ -59,7 +50,6 @@ const HandA = () => {
   };
 
   const positions = ["center", "left1", "left", "right", "right1"];
-  const colors = ["center", "left1", "left", "right", "right1"];
 
   const imageVariants = {
     center: { x: "0%", scale: 1, zIndex: 5 },
@@ -79,20 +69,12 @@ const HandA = () => {
       handleNext();
     }
   };
-
-
-  const handleSlideElementClick = (index) => {
-    setStopSlide(!stopslide)
-  }
   return (
     <div
       id='handa'
-      className='flex  flex-col gap-10 pb-12 md:px-20 m-auto bg-white overflow-hidden'
+      className='py-24 min-h-screen flex flex-col gap-10 md:px-20 m-auto bg-white overflow-hidden'
     >
-      <h2
-        style={libre.style}
-        className='text-center pt-[28px] font-semibold text-[34px]'
-      >
+      <h2 className='py-10 text-center font-bold text-[52px]'>
         Honors And Awards
       </h2>
       <div className='flex items-center flex-col justify-around  min-h-[70vh] overflow-hidden w-full relative'>
@@ -100,20 +82,17 @@ const HandA = () => {
           <motion.div
             key={index}
             className={`absolute md:w-[25%] w-[80%] rounded-[20px] ${
-              colors[index]
-            } py-12`}
+              positions[positionIndexes[index]]
+            } py-10`}
             animate={positions[positionIndexes[index]]}
             variants={imageVariants}
             transition={{ duration: 0.5 }}
             drag='x'
             dragConstraints={{ left: 0, right: 0 }}
             onDragEnd={handleDragEnd}
-            onClick={()=>handleSlideElementClick(index)}
           >
-            
-            <p style={poppins.style} className='p-3 text-[18px] font-semibold'>
-              {text}
-            </p>
+            <Image src={AwardImg} alt='' className='w-full' />
+            <p className='p-3 font-bold mt-10'>{text}</p>
           </motion.div>
         ))}
       </div>

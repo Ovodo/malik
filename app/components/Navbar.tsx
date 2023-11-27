@@ -41,20 +41,34 @@ const Navbar = () => {
         }  h-[95vh] lg:h-full  duration-300 lg:translate-x-0  lg:opacity-100 transition-all ease-linear  lg:flex-row items-start justify-start lg:justify-between lg:items-center absolute lg:relative top-[6.5vh] lg:top-0 left-0 flex flex-col bg-white`}
       >
         <li className={listStyle}>
-          <Link href={"/certification"}>Certifications</Link>
+          <Link onClick={toggleMenu} href={"/certification"}>
+            Certifications
+          </Link>
         </li>
         <li className={listStyle}>
-          <Link className='text-center break-all' href={"/research"}>
+          <Link
+            onClick={toggleMenu}
+            className='text-center break-all'
+            href={"/research"}
+          >
             Research
           </Link>
         </li>
         <li className={listStyle}>
-          <Link className='text-center break-all' href={"/skill"}>
+          <Link
+            onClick={toggleMenu}
+            className='text-center break-all'
+            href={"/skill"}
+          >
             Skillsets
           </Link>
         </li>
         <li className={listStyle}>
-          <Link className='text-center break-all' href={"/experience"}>
+          <Link
+            onClick={toggleMenu}
+            className='text-center break-all'
+            href={"/projects"}
+          >
             Selected Projects
           </Link>
         </li>

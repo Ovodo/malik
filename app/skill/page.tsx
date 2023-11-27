@@ -80,9 +80,9 @@ const Page = () => {
               >
                 {item.title}
               </h3>
-              <p className='text-white w-[50%] font-normal text-[20px] leading-[30px]'>
+              {/* <p className='text-white w-[50%] font-normal text-[20px] leading-[30px]'>
                 {item.desc}
-              </p>
+              </p> */}
             </div>
           ))}
         </div>
