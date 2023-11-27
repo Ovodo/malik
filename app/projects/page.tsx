@@ -131,8 +131,11 @@ export default function Experience() {
               </div>
               <div className='flex sm:hidden absolute bottom-1 right-2 self-end items-center space-x-3'>
                 <p
+                  onClick={() => {
+                    truncateSection(i);
+                  }}
                   style={poppins.style}
-                  className='font-semibold text-[18px] leading-[22px]'
+                  className='font-medium hover:underline text-[14px] leading-[22px]'
                 >
                   Read more...
                 </p>
@@ -189,7 +192,7 @@ export default function Experience() {
           ))}
         </div>
       </section>
-      <section className='bg-[#424E60] w-full px-[24px] pt-[31px] sm:pt-[72px] lg:pb-[124px]'>
+      <section className='bg-[#424E60] mt-10 w-full px-[24px] pt-[31px] sm:pt-[72px] lg:pb-[124px]'>
         <h2
           style={libre.style}
           className='font-semibold w-[176px] sm:w-[560px] mx-auto text-[34px]  mb-[50px] text-white  text-center'
@@ -205,7 +208,7 @@ export default function Experience() {
               <h3 className='font-medium text-[22px] leading-[28px]'>
                 {exp.head}
               </h3>
-              <p className='text-[18px] leading-[24px]'>{exp.text}</p>
+              <p className='text-[14px] leading-[24px]'>{exp.text}</p>
             </div>
           ))}
         </div>
