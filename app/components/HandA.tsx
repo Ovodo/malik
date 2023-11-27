@@ -6,25 +6,32 @@ import AwardImg from "@/public/assets/awa.png";
 import useFonts from "@/hooks/useFonts";
 
 const awards = [
-  `National Scholarship for Free Secondary Education, Federal Government of Nigeria, 1986`,
-  `Fellow @Institute of Chartered Management Consultants`,
-  `Best graduating Mathematic Senior Secondary School Student, 1992`,
-  `Fellow @Institute of Leadership, Entrepreneurship, and Corporate Governance`,
-  `Management Consultant with Distinction in Time Management (London Graduate School).`,
+  `TEXT 1`,
+  `TEXT 2`,
+  `TEXT 3`,
+  `TEXT 4`,
+  `TEXT 5`,
 ];
 const HandA = () => {
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
   const [currentIndex, setCurrentIndex] = useState(2);
   const { poppins, libre } = useFonts();
+  const [stopslide, setStopSlide] = useState(false)
 
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     handleDragEnd({}, {offset:{x:300}})
-  //   }, 5000);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (stopslide) {
+       return // console.log(stopslide)
+      } else {
+       // console.log('work',stopslide)
 
-  //   // Clear the interval when the component unmounts or on cleanup
-  //   return () => clearInterval(intervalId);
-  // }, [])
+       handleDragEnd({}, {offset:{x:300}})
+      }
+    }, 3000);
+
+    // Clear the interval when the component unmounts or on cleanup
+    return () => clearInterval(intervalId);
+  }, [stopslide])
 
   const handleNext = () => {
     setPositionIndexes((prevIndexes) => {
@@ -52,6 +59,7 @@ const HandA = () => {
   };
 
   const positions = ["center", "left1", "left", "right", "right1"];
+  const colors = ["center", "left1", "left", "right", "right1"];
 
   const imageVariants = {
     center: { x: "0%", scale: 1, zIndex: 5 },
@@ -71,6 +79,11 @@ const HandA = () => {
       handleNext();
     }
   };
+
+
+  const handleSlideElementClick = (index) => {
+    setStopSlide(!stopslide)
+  }
   return (
     <div
       id='handa'
@@ -82,12 +95,12 @@ const HandA = () => {
       >
         Honors And Awards
       </h2>
-      <div className='flex items-center flex-col justify-around  min-h-[60vh] overflow-hidden w-full relative'>
+      <div className='flex items-center flex-col justify-around  min-h-[70vh] overflow-hidden w-full relative'>
         {awards.map((text, index) => (
           <motion.div
             key={index}
             className={`absolute md:w-[25%] w-[80%] rounded-[20px] ${
-              positions[positionIndexes[index]]
+              colors[index]
             } py-12`}
             animate={positions[positionIndexes[index]]}
             variants={imageVariants}
@@ -95,8 +108,9 @@ const HandA = () => {
             drag='x'
             dragConstraints={{ left: 0, right: 0 }}
             onDragEnd={handleDragEnd}
+            onClick={()=>handleSlideElementClick(index)}
           >
-            <Image src={AwardImg} alt='' className='relative bottom-5 w-full' />
+            
             <p style={poppins.style} className='p-3 text-[18px] font-semibold'>
               {text}
             </p>

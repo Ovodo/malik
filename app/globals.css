@@ -117,25 +117,25 @@ body {
 /*"center", "left1", "left", "right", "right1"*/
 
 .center {
-  background: #fcc028;
+  background: #ece6dc;
 }
 
 .left {
-  background: #28293e;
+  background: #35353d;
   color: white;
 }
 
 .right1 {
-  background: #ef6d58;
+  background: #aaaaaa;
 }
 
 .right {
-  background: #28293e;
+  background: #adafc9;
   color: white;
 }
 
 .left1 {
-  background: #ef6d58;
+  background: #aaaaaa;
 }
 .skillCard {
   width: 361px;
