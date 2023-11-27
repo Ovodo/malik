@@ -12,6 +12,7 @@ const config: Config = {
         "body-color": "var(--body-color)",
         "header-color": "var(--header-color)",
         indicatot: "var(--indicatot)",
+        maroon: "#8A232A",
       },
       fontFamily: {
         body: "var(--body-font-family)",

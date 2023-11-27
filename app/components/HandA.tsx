@@ -44,7 +44,6 @@ const HandA = () => {
       const updatedIndexes = prevIndexes.map(
         (prevIndex) => (prevIndex + 4) % 5
       );
-      //  console.log(currentIndex)
       const setNewIndex = currentIndex <= 0 ? 4 : currentIndex - 1;
       setCurrentIndex(setNewIndex);
       return updatedIndexes;
@@ -61,7 +60,6 @@ const HandA = () => {
     right1: { x: "50%", scale: 0.7, zIndex: 3 },
   };
   const handleDragEnd = (event: any, info: { offset: { x: number } }) => {
-    //console.log(currentIndex, info)
     const swipeThreshold = 40;
     if (info?.offset?.x > swipeThreshold) {
       handleNext();
@@ -82,11 +80,11 @@ const HandA = () => {
       >
         Honors And Awards
       </h2>
-      <div className='flex items-center flex-col justify-around  min-h-[60vh] overflow-hidden w-full relative'>
+      <div className='flex items-center  sm:mx-5 flex-col justify-around  min-h-[60vh] overflow-hidden w-[95%] mx-auto lg:w-full relative'>
         {awards.map((text, index) => (
           <motion.div
             key={index}
-            className={`absolute md:w-[25%] w-[80%] rounded-[20px] ${
+            className={`absolute md:w-[25%] cursor-pointer w-[80%] rounded-[20px] ${
               positions[positionIndexes[index]]
             } py-12`}
             animate={positions[positionIndexes[index]]}
@@ -96,8 +94,12 @@ const HandA = () => {
             dragConstraints={{ left: 0, right: 0 }}
             onDragEnd={handleDragEnd}
           >
-            <Image src={AwardImg} alt='' className='relative bottom-5 w-full' />
-            <p style={poppins.style} className='p-3 text-[18px] font-semibold'>
+            <Image
+              src={AwardImg}
+              alt=''
+              className='relative bottom-5 lg:w-full'
+            />
+            <p style={poppins.style} className='p-3 text-[18px]  font-medium'>
               {text}
             </p>
           </motion.div>

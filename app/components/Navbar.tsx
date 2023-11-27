@@ -54,7 +54,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li className={listStyle}>
-          <Link className='text-center break-all' href={"/experience"}>
+          <Link className='text-center break-all' href={"/projects"}>
             Selected Projects
           </Link>
         </li>

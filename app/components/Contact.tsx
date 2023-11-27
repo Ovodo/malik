@@ -13,7 +13,7 @@ const ContactMe = () => {
     >
       <h3
         style={libre.style}
-        className='font-semibold absolute top-6 mx-auto text-[34px]  mb-2'
+        className='font-semibold w-full text-center absolute top-6 mx-auto text-[34px]  mb-2'
       >
         Contact
       </h3>
@@ -102,7 +102,7 @@ const ContactMe = () => {
             rows={5}
           ></textarea>
         </div>
-        <button className='flex w-full rounded-md justify-center items-center text-white bg-[#8A232A] p-3 gap-3'>
+        <button className='flex w-full rounded-md justify-center items-center text-white bg-header-color p-3 gap-3'>
           <span>Submit</span>
           <IoMdSend size={30} />
         </button>

@@ -14,12 +14,17 @@ const volExp = [
   {
     img: `global`,
     text: `Globalization as Catalyst for International Entrepreneurship`,
+    link: "/research/global",
+  },
+  {
+    img: `kogi`,
+    text: `Kogi Reports`,
     link: "https://kogireports.com/tag/malik-abdullahi-okino/",
   },
   {
     img: `digital`,
     text: `Digital Marketing and Performance of Multinational Corporations in the Post-Covid-19 Era`,
-    link: "https://jpapgr.com/index.php/research/article/download/19/19",
+    link: "/research/digital",
   },
   {
     img: `punch`,
@@ -56,7 +61,8 @@ const Page = () => {
                 />
               </div>
               <Link
-                className='text-[20px] sm:text-[28px] sm:leading-[28px] w-[50%] font-semibold underline text-header-color leading-[23.46px]'
+                target='_blank'
+                className='text-[18px]  sm:leading-[28px] w-[100%] break-all font-medium underline text-header-color leading-[23.46px]'
                 href={exp.link}
               >
                 {exp.text}
@@ -77,8 +83,10 @@ const Page = () => {
             <div className='text-header-color w-[100%]  relative  sm:min-h-[600px] pb-5'>
               <div className='flex  absolute bottom-1 right-2 self-end items-center space-x-3'>
                 <p
-                  style={poppins.style}
-                  className='font-semibold text-[18px] leading-[22px]'
+                  onClick={() => {
+                    setTruncate(!truncate);
+                  }}
+                  className='font-semibold hover:underline hover:cursor-pointer text-[14px] leading-[22px]'
                 >
                   {truncate ? "Read more..." : "Read less"}
                 </p>
@@ -93,12 +101,12 @@ const Page = () => {
               </div>
               <h2
                 style={poppins.style}
-                className='font-semibold w-[380px] sm:w-[320px] lg:w-full  mb-[20px] text-[22px]  leading-[28px]'
+                className='font-semibold w-[380px] sm:w-[318px] lg:w-full  mb-[18px] text-[18px]  leading-[28px]'
               >
                 Westcliff University/ Department of Business
                 Administration/Irvine, CA, USA Doctoral Student 2017-2022
               </h2>
-              <h3 className='text-[18px] leading-[30px] font-normal mb-[30px]'>
+              <h3 className='text-[14px] leading-[30px] font-normal mb-[30px]'>
                 <strong className='font-medium'>Dissertation Chairman: </strong>
                 Professor Elsayess Mahmood: Ph.D., PMP, MCS. Methodologist:
                 Professor Simin Hojat, Ph.D. Subject Matter Expert: Professor
@@ -106,10 +114,10 @@ const Page = () => {
                 Dissertation: Integrating Blockchain into Electronic Stamp Duty
                 Collections (A Case Study).
               </h3>
-              <h2 className='font-medium text-[20px] leading-[28px] mb-[15px]'>
+              <h2 className='font-medium text-[18px] leading-[28px] mb-[15px]'>
                 Brief description of Project
               </h2>
-              <p className='font-normal text-[18px] leading-[24px]'>
+              <p className='font-normal text-[14px] leading-[24px]'>
                 In this scholarly presentation, I embark on an immersive journey
                 into the heart of a profound financial syndicate fraud that has
                 cast a shadow over Nigeria&apos;s banking landscape. This
@@ -125,10 +133,10 @@ const Page = () => {
               <br />
               {!truncate && (
                 <div>
-                  <b className='font-medium text-[20px] leading-[24px]'>
+                  <b className='font-medium text-[18px] leading-[24px]'>
                     Unveiling the Fraud Landscape:
                   </b>
-                  <p className='text-[18px] leading-[24px]'>
+                  <p className='text-[14px] leading-[24px]'>
                     My investigative endeavor delves deep into the inner
                     workings of Nigeria&apos;s banks, financial institutions,
                     and the central bank, uncovering the elaborate network that
@@ -148,10 +156,10 @@ const Page = () => {
                   </p>
                   <br />
                   <br />
-                  <b className='font-medium text-[20px] leading-[24px]'>
+                  <b className='font-medium text-[18px] leading-[24px]'>
                     Understanding the &quot;How&quot; and &quot;Methods&quot;:
                   </b>{" "}
-                  <p className='text-[18px]'>
+                  <p className='text-[14px]'>
                     Central to my academic endeavor is a comprehensive
                     understanding of the modus operandi adopted by the
                     syndicate. I meticulously dissect the intricate methods
@@ -163,10 +171,10 @@ const Page = () => {
                   </p>
                   <br />
                   <br />
-                  <b className='font-medium text-[20px] leading-[24px]'>
+                  <b className='font-medium text-[18px] leading-[24px]'>
                     Causal Factors and Root Analysis:
                   </b>{" "}
-                  <p className='text-[18px]'>
+                  <p className='text-[14px]'>
                     Beyond the surface intricacies, I venture into the realm of
                     causal factors, delving into the underlying socioeconomic,
                     regulatory, and ethical considerations that paved the way
@@ -177,10 +185,10 @@ const Page = () => {
                   </p>
                   <br />
                   <br />
-                  <b className='font-medium text-[20px] leading-[24px]'>
+                  <b className='font-medium text-[18px] leading-[24px]'>
                     A Pioneering Solution:
                   </b>{" "}
-                  <p className='text-[18px]'>
+                  <p className='text-[14px]'>
                     Charting a Path Forward: With insights gleaned from my
                     meticulous examination, I proudly present an innovative and
                     near-permanent solution to mitigate the looming specter of
@@ -195,10 +203,10 @@ const Page = () => {
                   </p>
                   <br />
                   <br />
-                  <b className='font-medium text-[20px] leading-[24px]'>
+                  <b className='font-medium text-[18px] leading-[24px]'>
                     Proposal:
                   </b>{" "}
-                  <p className='text-[18px]'>
+                  <p className='text-[14px]'>
                     An innovative proposition of integrating a centralized
                     database system with cutting-edge blockchain technology.
                     This visionary blockchain system, fortified by cryptographic
@@ -219,10 +227,10 @@ const Page = () => {
                   </p>
                   <br />
                   <br />
-                  <b className='font-medium text-[20px] leading-[24px]'>
+                  <b className='font-medium text-[18px] leading-[24px]'>
                     Conclusion:
                   </b>{" "}
-                  <p className='text-[18px]'>
+                  <p className='text-[14px]'>
                     Nigeria was a case study, but the proposal applies worldwide
                     to fraud-proof electronic tax collection processes.
                   </p>
@@ -235,7 +243,7 @@ const Page = () => {
             <div className='flex sm:hidden  absolute bottom-1 right-2 self-end items-center space-x-3'>
               <p
                 style={poppins.style}
-                className='font-semibold text-[18px] leading-[22px]'
+                className='font-semibold text-[14px] leading-[22px]'
               >
                 {truncate2 ? "Read more..." : "Read less"}
               </p>
@@ -250,12 +258,12 @@ const Page = () => {
             </div>
             <h2
               style={poppins.style}
-              className='font-semibold w-[380px] lg:w-full mb-[20px] mt-[50px] sm:mt-[0px] text-[22px] leading-[28px]'
+              className='font-semibold w-[380px] lg:w-full mb-[18px] mt-[50px] sm:mt-[0px] text-[18px] leading-[28px]'
             >
               Coventry University, London Campus/Department of Business
               Administration/London, UK
             </h2>
-            <h3 className='text-[20px] leading-[30px] font-normal mb-[30px]'>
+            <h3 className='text-[14px] leading-[30px] font-normal mb-[30px]'>
               <strong className='font-medium'>
                 Consulting Fellow 2015 -2016 Mentor:{" "}
               </strong>{" "}
@@ -263,66 +271,73 @@ const Page = () => {
               “Developing Entry Strategy into the South American and the
               Caribbean Oil and Gas Market.”
             </h3>
-            <h2 className='font-medium text-[20px] leading-[24px]  mt-[30px] mb-[15px]'>
+            <h2 className='font-medium text-[18px] leading-[24px]  mt-[30px] mb-[15px]'>
               Tasks
             </h2>
-            <p className='text-[18px] leading-[24px]'>
+            <p className='text-[14px] leading-[24px]'>
               Conducted extensive research to identify market entry strategies
               into South America and the Caribbean region and made categorized
               recommendations for Genesis Oil and Gas.
             </p>
             <br />
             <br />
-            <b className='font-medium text-[20px] leading-[24px]'>
+            <b className='font-medium text-[18px] leading-[24px]'>
               Short-term:
             </b>{" "}
-            Projects in the production phase are under five years old.
-            Short-term recommendations consist of ongoing projects at the
-            producing stage. Due to the oil price downturn, most Oil and Gas
-            companies are looking for better opportunities to enhance their
-            production while reducing costs. As a short-term strategy, Genesis
-            can enter projects immediately in the producing stages to take
-            advantage of the volatility in the oil and gas industry.
+            <p className='text-[14px]'>
+              Projects in the production phase are under five years old.
+              Short-term recommendations consist of ongoing projects at the
+              producing stage. Due to the oil price downturn, most Oil and Gas
+              companies are looking for better opportunities to enhance their
+              production while reducing costs. As a short-term strategy, Genesis
+              can enter projects immediately in the producing stages to take
+              advantage of the volatility in the oil and gas industry.
+            </p>
             <br />
             <br />
             <div className='hidden sm:flex sm:flex-col'>
-              <b className='font-medium text-[20px] leading-[24px]'>
+              <b className='font-medium text-[18px] leading-[24px]'>
                 Mid-term:
               </b>{" "}
-              Projects in the development phase are 5 – 10 years old. Mid-term
-              recommendations include projects at the exploration stage. This
-              stage of the hydrocarbon production process is a complex and
-              costly business. In contrast, a positive result is not granted,
-              and hydrocarbons can be located in the most inhospitable parts of
-              the world (BP 2008). Oil companies prefer to save funds nowadays,
-              and it is an excellent opportunity for Genesis, with its area of
-              expertise, to join the projects.
+              <p className='text-[14px]'>
+                Projects in the development phase are 5 – 10 years old. Mid-term
+                recommendations include projects at the exploration stage. This
+                stage of the hydrocarbon production process is a complex and
+                costly business. In contrast, a positive result is not granted,
+                and hydrocarbons can be located in the most inhospitable parts
+                of the world (BP 2008). Oil companies prefer to save funds
+                nowadays, and it is an excellent opportunity for Genesis, with
+                its area of expertise, to join the projects.
+              </p>
               <br />
               <br />
-              <b className='font-medium text-[20px] leading-[24px]'>
+              <b className='font-medium text-[18px] leading-[24px]'>
                 Long-term:
               </b>{" "}
-              Prospective projects are for more than ten years. According to PWC
-              (2016), every oil and gas player, including service providers, can
-              adopt long-term strategies:
-              <br />
-              1. Develop a more robust supply chain management capability;
-              <br />
-              2. Invest in human capital & cost structure,
-              <br />
-              3. Capture the value of technologies, and
-              <br />
-              4. Align the asset and investment portfolio with a future source
-              of value. Based on research findings identified that Guyana and
-              Chile are the two countries that seize emerging strategic
-              opportunities. The table below shows the long-term recommendation
-              for Genesis; this available recommendation strategy requires an
-              extensive period to establish a business platform due to
-              macroeconomics, technologies, legislation framework, and finances.
+              <p className='text-[14px] leading-[22px]'>
+                Prospective projects are for more than ten years. According to
+                PWC (2016), every oil and gas player, including service
+                providers, can adopt long-term strategies:
+                <br />
+                1. Develop a more robust supply chain management capability;
+                <br />
+                2. Invest in human capital & cost structure,
+                <br />
+                3. Capture the value of technologies, and
+                <br />
+                4. Align the asset and investment portfolio with a future source
+                of value. Based on research findings identified that Guyana and
+                Chile are the two countries that seize emerging strategic
+                opportunities. The table below shows the long-term
+                recommendation for Genesis; this available recommendation
+                strategy requires an extensive period to establish a business
+                platform due to macroeconomics, technologies, legislation
+                framework, and finances.
+              </p>
             </div>
             {!truncate2 && (
-              <div>
-                <b className='font-medium text-[20px] leading-[24px]'>
+              <div className='text-[14px]'>
+                <b className='font-medium text-[18px] leading-[24px]'>
                   Mid-term:
                 </b>{" "}
                 Projects in the development phase are 5 – 10 years old. Mid-term
@@ -335,12 +350,14 @@ const Page = () => {
                 its area of expertise, to join the projects.
                 <br />
                 <br />
-                <b className='font-medium text-[20px] leading-[24px]'>
+                <b className='font-medium text-[18px] leading-[24px]'>
                   Long-term:
                 </b>{" "}
-                Prospective projects are for more than ten years. According to
-                PWC (2016), every oil and gas player, including service
-                providers, can adopt long-term strategies:
+                <p className='text-[14px]'>
+                  Prospective projects are for more than ten years. According to
+                  PWC (2016), every oil and gas player, including service
+                  providers, can adopt long-term strategies:
+                </p>
                 <br />
                 1. Develop a more robust supply chain management capability;
                 <br />
