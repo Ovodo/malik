@@ -42,9 +42,9 @@ const Page = () => {
       <section className='bg-body-color h-full w-full px-[10px] lg:pb-[124px]'>
         <h2
           style={libre.style}
-          className='font-semibold w-[176px] sm:w-[560px] mx-auto text-[34px]  mt-[31px] mb-[50px] text-white  text-center'
+          className='font-normal w-[176px] sm:w-[560px] mx-auto text-[34px]  mt-[31px] mb-[50px] text-white  text-center'
         >
-          Research and Articles
+          Research
         </h2>
         <div className='w-full m-auto h-[80%] flex flex-col justify-between gap-4  mb-4'>
           {volExp.map((exp, i) => (
@@ -74,13 +74,13 @@ const Page = () => {
       <section className=' bg-white mb-3'>
         <h2
           style={libre.style}
-          className='font-semibold w-[321px] sm:w-full mx-auto mt-[40px] mb-[50px] text-[34px] text-center'
+          className='font-normal w-[321px] sm:w-full mx-auto mt-[40px] mb-[50px] text-[34px] text-center'
         >
           Research Experience
         </h2>
-        <div className='w-[90%] m-auto flex flex-col sm:flex-row justify-center   gap-4  mb-4'>
-          <div className='sm:w-[50%]'>
-            <div className='text-header-color w-[100%]  relative  sm:min-h-[600px] pb-5'>
+        <div className='w-[90%] lg:w-[80%] m-auto flex flex-col sm:flex-row justify-between   gap-4  mb-4'>
+          <div className=' sm:w-[45%]'>
+            <div className='text-header-color w-[100%] p-2 rounded-md  border-y-8 border-[#d9d9d9] border-x-2  relative  sm:min-h-[600px] pb-5'>
               <div className='flex  absolute bottom-1 right-2 self-end items-center space-x-3'>
                 <p
                   onClick={() => {
@@ -101,7 +101,7 @@ const Page = () => {
               </div>
               <h2
                 style={poppins.style}
-                className='font-semibold w-[380px] sm:w-[318px] lg:w-full  mb-[18px] text-[18px]  leading-[28px]'
+                className='font-semibold   lg:w-full  mb-[18px] text-[18px]  leading-[28px]'
               >
                 Westcliff University/ Department of Business
                 Administration/Irvine, CA, USA Doctoral Student 2017-2022
@@ -239,142 +239,146 @@ const Page = () => {
             </div>
           </div>
 
-          <div className='relative  sm:w-[50%]  pb-10'>
-            <div className='flex sm:hidden  absolute bottom-1 right-2 self-end items-center space-x-3'>
-              <p
+          <div className='relative  sm:w-[45%]'>
+            <div className='text-header-color w-[100%] p-2 rounded-md  border-y-8 border-[#d9d9d9] border-x-2  relative  sm:min-h-[600px] pb-5'>
+              <div className='flex sm:hidden  absolute bottom-1 right-2 self-end items-center space-x-3'>
+                <p
+                  style={poppins.style}
+                  className='font-semibold text-[14px] leading-[22px]'
+                >
+                  {truncate2 ? "Read more..." : "Read less"}
+                </p>
+                <button
+                  className={`${!truncate2 ? "rotate-180" : "rotate-0"}`}
+                  onClick={() => {
+                    setTruncate2(!truncate2);
+                  }}
+                >
+                  <RiArrowDropDownLine />
+                </button>
+              </div>
+              <h2
                 style={poppins.style}
-                className='font-semibold text-[14px] leading-[22px]'
+                className='font-semibold  lg:w-full mb-[18px] mt-[50px] sm:mt-[0px] text-[18px] leading-[28px]'
               >
-                {truncate2 ? "Read more..." : "Read less"}
+                Coventry University, London Campus/Department of Business
+                Administration/London, UK
+              </h2>
+              <h3 className='text-[14px] leading-[30px] font-normal mb-[30px]'>
+                <strong className='font-medium'>
+                  Consulting Fellow 2015 -2016 Mentor:{" "}
+                </strong>{" "}
+                Doctor Beeker (Ph.D., MEI, MCMI, FHEA, FRSA). Project Title:
+                “Developing Entry Strategy into the South American and the
+                Caribbean Oil and Gas Market.”
+              </h3>
+              <h2 className='font-medium text-[18px] leading-[24px]  mt-[30px] mb-[15px]'>
+                Tasks
+              </h2>
+              <p className='text-[14px] leading-[24px]'>
+                Conducted extensive research to identify market entry strategies
+                into South America and the Caribbean region and made categorized
+                recommendations for Genesis Oil and Gas.
               </p>
-              <button
-                className={`${!truncate2 ? "rotate-180" : "rotate-0"}`}
-                onClick={() => {
-                  setTruncate2(!truncate2);
-                }}
-              >
-                <RiArrowDropDownLine />
-              </button>
-            </div>
-            <h2
-              style={poppins.style}
-              className='font-semibold w-[380px] lg:w-full mb-[18px] mt-[50px] sm:mt-[0px] text-[18px] leading-[28px]'
-            >
-              Coventry University, London Campus/Department of Business
-              Administration/London, UK
-            </h2>
-            <h3 className='text-[14px] leading-[30px] font-normal mb-[30px]'>
-              <strong className='font-medium'>
-                Consulting Fellow 2015 -2016 Mentor:{" "}
-              </strong>{" "}
-              Doctor Beeker (Ph.D., MEI, MCMI, FHEA, FRSA). Project Title:
-              “Developing Entry Strategy into the South American and the
-              Caribbean Oil and Gas Market.”
-            </h3>
-            <h2 className='font-medium text-[18px] leading-[24px]  mt-[30px] mb-[15px]'>
-              Tasks
-            </h2>
-            <p className='text-[14px] leading-[24px]'>
-              Conducted extensive research to identify market entry strategies
-              into South America and the Caribbean region and made categorized
-              recommendations for Genesis Oil and Gas.
-            </p>
-            <br />
-            <br />
-            <b className='font-medium text-[18px] leading-[24px]'>
-              Short-term:
-            </b>{" "}
-            <p className='text-[14px]'>
-              Projects in the production phase are under five years old.
-              Short-term recommendations consist of ongoing projects at the
-              producing stage. Due to the oil price downturn, most Oil and Gas
-              companies are looking for better opportunities to enhance their
-              production while reducing costs. As a short-term strategy, Genesis
-              can enter projects immediately in the producing stages to take
-              advantage of the volatility in the oil and gas industry.
-            </p>
-            <br />
-            <br />
-            <div className='hidden sm:flex sm:flex-col'>
+              <br />
+              <br />
               <b className='font-medium text-[18px] leading-[24px]'>
-                Mid-term:
+                Short-term:
               </b>{" "}
               <p className='text-[14px]'>
-                Projects in the development phase are 5 – 10 years old. Mid-term
-                recommendations include projects at the exploration stage. This
-                stage of the hydrocarbon production process is a complex and
-                costly business. In contrast, a positive result is not granted,
-                and hydrocarbons can be located in the most inhospitable parts
-                of the world (BP 2008). Oil companies prefer to save funds
-                nowadays, and it is an excellent opportunity for Genesis, with
-                its area of expertise, to join the projects.
+                Projects in the production phase are under five years old.
+                Short-term recommendations consist of ongoing projects at the
+                producing stage. Due to the oil price downturn, most Oil and Gas
+                companies are looking for better opportunities to enhance their
+                production while reducing costs. As a short-term strategy,
+                Genesis can enter projects immediately in the producing stages
+                to take advantage of the volatility in the oil and gas industry.
               </p>
               <br />
               <br />
-              <b className='font-medium text-[18px] leading-[24px]'>
-                Long-term:
-              </b>{" "}
-              <p className='text-[14px] leading-[22px]'>
-                Prospective projects are for more than ten years. According to
-                PWC (2016), every oil and gas player, including service
-                providers, can adopt long-term strategies:
-                <br />
-                1. Develop a more robust supply chain management capability;
-                <br />
-                2. Invest in human capital & cost structure,
-                <br />
-                3. Capture the value of technologies, and
-                <br />
-                4. Align the asset and investment portfolio with a future source
-                of value. Based on research findings identified that Guyana and
-                Chile are the two countries that seize emerging strategic
-                opportunities. The table below shows the long-term
-                recommendation for Genesis; this available recommendation
-                strategy requires an extensive period to establish a business
-                platform due to macroeconomics, technologies, legislation
-                framework, and finances.
-              </p>
-            </div>
-            {!truncate2 && (
-              <div className='text-[14px]'>
+              <div className='hidden sm:flex sm:flex-col'>
                 <b className='font-medium text-[18px] leading-[24px]'>
                   Mid-term:
                 </b>{" "}
-                Projects in the development phase are 5 – 10 years old. Mid-term
-                recommendations include projects at the exploration stage. This
-                stage of the hydrocarbon production process is a complex and
-                costly business. In contrast, a positive result is not granted,
-                and hydrocarbons can be located in the most inhospitable parts
-                of the world (BP 2008). Oil companies prefer to save funds
-                nowadays, and it is an excellent opportunity for Genesis, with
-                its area of expertise, to join the projects.
+                <p className='text-[14px]'>
+                  Projects in the development phase are 5 – 10 years old.
+                  Mid-term recommendations include projects at the exploration
+                  stage. This stage of the hydrocarbon production process is a
+                  complex and costly business. In contrast, a positive result is
+                  not granted, and hydrocarbons can be located in the most
+                  inhospitable parts of the world (BP 2008). Oil companies
+                  prefer to save funds nowadays, and it is an excellent
+                  opportunity for Genesis, with its area of expertise, to join
+                  the projects.
+                </p>
                 <br />
                 <br />
                 <b className='font-medium text-[18px] leading-[24px]'>
                   Long-term:
                 </b>{" "}
-                <p className='text-[14px]'>
+                <p className='text-[14px] leading-[22px]'>
                   Prospective projects are for more than ten years. According to
                   PWC (2016), every oil and gas player, including service
                   providers, can adopt long-term strategies:
+                  <br />
+                  1. Develop a more robust supply chain management capability;
+                  <br />
+                  2. Invest in human capital & cost structure,
+                  <br />
+                  3. Capture the value of technologies, and
+                  <br />
+                  4. Align the asset and investment portfolio with a future
+                  source of value. Based on research findings identified that
+                  Guyana and Chile are the two countries that seize emerging
+                  strategic opportunities. The table below shows the long-term
+                  recommendation for Genesis; this available recommendation
+                  strategy requires an extensive period to establish a business
+                  platform due to macroeconomics, technologies, legislation
+                  framework, and finances.
                 </p>
-                <br />
-                1. Develop a more robust supply chain management capability;
-                <br />
-                2. Invest in human capital & cost structure,
-                <br />
-                3. Capture the value of technologies, and
-                <br />
-                4. Align the asset and investment portfolio with a future source
-                of value. Based on research findings identified that Guyana and
-                Chile are the two countries that seize emerging strategic
-                opportunities. The table below shows the long-term
-                recommendation for Genesis; this available recommendation
-                strategy requires an extensive period to establish a business
-                platform due to macroeconomics, technologies, legislation
-                framework, and finances.
               </div>
-            )}
+              {!truncate2 && (
+                <div className='text-[14px]'>
+                  <b className='font-medium text-[18px] leading-[24px]'>
+                    Mid-term:
+                  </b>{" "}
+                  Projects in the development phase are 5 – 10 years old.
+                  Mid-term recommendations include projects at the exploration
+                  stage. This stage of the hydrocarbon production process is a
+                  complex and costly business. In contrast, a positive result is
+                  not granted, and hydrocarbons can be located in the most
+                  inhospitable parts of the world (BP 2008). Oil companies
+                  prefer to save funds nowadays, and it is an excellent
+                  opportunity for Genesis, with its area of expertise, to join
+                  the projects.
+                  <br />
+                  <br />
+                  <b className='font-medium text-[18px] leading-[24px]'>
+                    Long-term:
+                  </b>{" "}
+                  <p className='text-[14px]'>
+                    Prospective projects are for more than ten years. According
+                    to PWC (2016), every oil and gas player, including service
+                    providers, can adopt long-term strategies:
+                  </p>
+                  <br />
+                  1. Develop a more robust supply chain management capability;
+                  <br />
+                  2. Invest in human capital & cost structure,
+                  <br />
+                  3. Capture the value of technologies, and
+                  <br />
+                  4. Align the asset and investment portfolio with a future
+                  source of value. Based on research findings identified that
+                  Guyana and Chile are the two countries that seize emerging
+                  strategic opportunities. The table below shows the long-term
+                  recommendation for Genesis; this available recommendation
+                  strategy requires an extensive period to establish a business
+                  platform due to macroeconomics, technologies, legislation
+                  framework, and finances.
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>
