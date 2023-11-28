@@ -84,7 +84,7 @@ const HandA = () => {
         {awards.map((text, index) => (
           <motion.div
             key={index}
-            className={`absolute md:w-[25%] cursor-pointer w-[80%] rounded-[20px] bg-header-color text-white py-12`}
+            className={`absolute lg:w-[25%] cursor-pointer w-[80%] rounded-[20px] bg-header-color text-white py-12`}
             animate={positions[positionIndexes[index]]}
             variants={imageVariants}
             transition={{ duration: 0.5 }}
