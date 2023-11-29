@@ -30,8 +30,6 @@ const HandA = () => {
       const updatedIndexes = prevIndexes.map(
         (prevIndex) => (prevIndex + 1) % 5
       );
-
-      
       const setNewIndex = currentIndex >= 4 ? 1 : currentIndex + 1;
       setCurrentIndex(setNewIndex);
 
