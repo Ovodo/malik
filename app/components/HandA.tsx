@@ -16,7 +16,7 @@ const HandA = () => {
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
   const [currentIndex, setCurrentIndex] = useState(2);
   const { poppins, libre } = useFonts();
-
+const [positions, setPositions] = useState(["center", "left1", "left", "right", "right1"])
   // useEffect(() => {
   //   const intervalId = setInterval(() => {
   //     handleDragEnd({}, {offset:{x:300}})
@@ -32,11 +32,12 @@ const HandA = () => {
         (prevIndex) => (prevIndex + 1) % 5
       );
       
-      const setNewIndex = currentIndex >= 4 ? 1 : currentIndex + 1;
-      setCurrentIndex(setNewIndex);
 
       return updatedIndexes;
     });
+    
+    const setNewIndex = currentIndex >= 4 ? 1 : currentIndex + 1;
+    setCurrentIndex(setNewIndex);
   };
 
   const handleBack = () => {
@@ -50,8 +51,40 @@ const HandA = () => {
     });
   };
 
-  const positions = ["center", "left1", "left", "right", "right1"];
+  useEffect(() => {
+    console.log( currentIndex)
+    
+  }, [currentIndex])
+  const setIndexOnClick = (clickedIndex) => {
+    setPositionIndexes((prevIndexes) => {
+      const newIndexes = [...prevIndexes];
 
+      //console.log(clickedIndex, currentIndex, newIndexes)
+      // Swap clickedIndex with the index at position 0
+      const temp = newIndexes[clickedIndex];
+      const crnt =newIndexes[currentIndex]
+      newIndexes[currentIndex] = temp
+      newIndexes[clickedIndex] = crnt;
+      setCurrentIndex(clickedIndex); // Set currentIndex to 0 after the swap
+      console.log('after', clickedIndex)
+
+      return newIndexes;
+    });
+    
+    // Move the clicked element to the center
+    // const centerIndex = positions.indexOf("center");
+    // console.log(centerIndex)
+    // const clickedElementIndex = positions.indexOf(positions[positionIndexes[clickedIndex]]);
+    // console.log(centerIndex - clickedElementIndex + 5,  (centerIndex - clickedElementIndex + 5) % 5)
+    // const distance = (centerIndex - clickedElementIndex + 5) % 5; // Calculate the distance to move
+    // const newPositions = positions.map(
+    //   (_, index) => positions[(index + distance) % 5]
+    // );
+    // console.log(newPositions)
+    // setPositions(newPositions);
+  }
+ 
+  //const colors = ["center", "left1", "left", "right", "right1"];
   const imageVariants = {
     center: { x: "0%", scale: 1, zIndex: 5 },
     left1: { x: "-50%", scale: 0.7, zIndex: 3 },
@@ -91,6 +124,7 @@ const HandA = () => {
             drag='x'
             dragConstraints={{ left: 0, right: 0 }}
             onDragEnd={handleDragEnd}
+            onClick={()=>setIndexOnClick(index)}
           >
             <Image
               src={AwardImg}
@@ -98,6 +132,7 @@ const HandA = () => {
               className='relative bottom-5 lg:w-full'
             />
             <p style={poppins.style} className='p-3 text-[18px]  font-normal'>
+              --{positions[positionIndexes[index]]}--{positionIndexes[index]}--{currentIndex}--
               {text}
             </p>
           </motion.div>
