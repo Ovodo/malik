@@ -8,7 +8,7 @@ const font = Montserrat({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Dr. Malik Abdullahi Adaviriku",
   description:
-    "Dr. Malik Abdullahi Adaviriku, Buisness Consultant, Nigeria Scholar",
+    "Dr. Malik Abdullahi Adaviriku, Buisness Consultant, Nigerian Scholar",
 };
 
 export default function RootLayout({

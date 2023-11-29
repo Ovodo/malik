@@ -22,6 +22,8 @@ const ContactMe = () => {
   const [no, setNo] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  const disableButton = name == " " || email == "" || country == "";
   const handleCaptchaChange = (value: any) => {
     // value will be null if the user fails the captcha challenge
     setIsCaptchaVerified(value !== null);
@@ -195,11 +197,11 @@ const ContactMe = () => {
           onChange={handleCaptchaChange}
         />
         <button
-          disabled={!isCaptchaVerified}
+          disabled={!isCaptchaVerified || disableButton}
           onClick={handleSubmit}
           className='flex w-full disabled:opacity-50 rounded-md justify-center items-center text-white bg-header-color p-3 gap-3'
         >
-          <span>Submit</span>
+          <span>Send Message</span>
           <IoMdSend size={30} />
         </button>
       </div>

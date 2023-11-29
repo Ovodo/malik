@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <div
       style={poppins.style}
-      className='relative    shadow-sm w-full shadow-slate-300 z-20   flex items-center lg:justify-around bg-white h-[12vh] lg:h-[12vh]'
+      className='relative    shadow-sm w-full shadow-slate-300 z-20   flex items-center lg:justify-around bg-white h-[12vh] '
     >
       <Link
         href={"/"}
@@ -38,7 +38,7 @@ const Navbar = () => {
           !isOpen
             ? "-translate-x-full opacity-0"
             : "translate-x-0 opacity-100 scale-100 z-10"
-        }  h-[95vh] lg:h-full  duration-300 lg:translate-x-0  lg:opacity-100 transition-all ease-linear  lg:flex-row items-start justify-start lg:justify-between lg:items-center absolute lg:relative top-[6.5vh] lg:top-0 left-0 flex flex-col bg-white`}
+        }  h-[88vh] lg:h-full  duration-300 lg:translate-x-0  lg:opacity-100 transition-all ease-linear  lg:flex-row items-start justify-start lg:justify-between lg:items-center absolute lg:relative top-[12vh] lg:top-0 left-0 flex flex-col bg-white`}
       >
         <li className={listStyle}>
           <Link onClick={toggleMenu} href={"/certification"}>
@@ -75,7 +75,7 @@ const Navbar = () => {
         <Link
           style={poppins.style}
           href={"/#contact"}
-          className='px-5 py-4 absolute lg:relative lg:hidden flex top-[60vh] lg:top-0  ml-[12px] lg:mr-[  14px] font-semibold text-[18px] tracking-[var(--header-letter-spacing)] [font-style:var(--header-font-style)] leading-[var(--header-line-height)] text-white bg-header-color rounded-md'
+          className='px-5 py-4 absolute lg:relative lg:hidden flex top-[60vh] lg:top-0  ml-[12px] lg:mr-[14px] font-medium text-[18px] tracking-[var(--header-letter-spacing)] [font-style:var(--header-font-style)] leading-[var(--header-line-height)] text-white bg-header-color rounded-md'
         >
           Contact
         </Link>
@@ -83,7 +83,7 @@ const Navbar = () => {
       <Link
         style={poppins.style}
         href={"/#contact"}
-        className='px-5 py-4 absolute lg:relative lg:flex hidden top-[60vh] md:top-0  ml-[12px] md:mr-[  14px] font-semibold text-[18px] tracking-[var(--header-letter-spacing)] [font-style:var(--header-font-style)] leading-[var(--header-line-height)] text-white bg-header-color rounded-md'
+        className='px-5 py-4 absolute lg:relative lg:flex hidden top-[60vh] md:top-0  ml-[12px] md:mr-[  14px] font-medium text-[18px] tracking-[var(--header-letter-spacing)] [font-style:var(--header-font-style)] leading-[var(--header-line-height)] text-white bg-header-color rounded-md'
       >
         Contact
       </Link>
