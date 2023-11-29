@@ -51,37 +51,31 @@ const [positions, setPositions] = useState(["center", "left1", "left", "right", 
     });
   };
 
-  useEffect(() => {
-    console.log( currentIndex)
-    
-  }, [currentIndex])
-  const setIndexOnClick = (clickedIndex) => {
+  // useEffect(() => {
+  //   console.log( currentIndex)
+  // }, [currentIndex])
+
+  /**
+   * 
+   * @param clickedIndex 
+   */
+  const setIndexOnClick = (clickedIndex:number) => {
     setPositionIndexes((prevIndexes) => {
       const newIndexes = [...prevIndexes];
 
       //console.log(clickedIndex, currentIndex, newIndexes)
       // Swap clickedIndex with the index at position 0
-      const temp = newIndexes[clickedIndex];
-      const crnt =newIndexes[currentIndex]
-      newIndexes[currentIndex] = temp
-      newIndexes[clickedIndex] = crnt;
-      setCurrentIndex(clickedIndex); // Set currentIndex to 0 after the swap
+      const newIndex = newIndexes[clickedIndex];
+      const current = newIndexes[currentIndex];
+      newIndexes[currentIndex] = newIndex
+      newIndexes[clickedIndex] = current;
+      setCurrentIndex(clickedIndex); 
       console.log('after', clickedIndex)
 
       return newIndexes;
     });
     
-    // Move the clicked element to the center
-    // const centerIndex = positions.indexOf("center");
-    // console.log(centerIndex)
-    // const clickedElementIndex = positions.indexOf(positions[positionIndexes[clickedIndex]]);
-    // console.log(centerIndex - clickedElementIndex + 5,  (centerIndex - clickedElementIndex + 5) % 5)
-    // const distance = (centerIndex - clickedElementIndex + 5) % 5; // Calculate the distance to move
-    // const newPositions = positions.map(
-    //   (_, index) => positions[(index + distance) % 5]
-    // );
-    // console.log(newPositions)
-    // setPositions(newPositions);
+   
   }
  
   //const colors = ["center", "left1", "left", "right", "right1"];
