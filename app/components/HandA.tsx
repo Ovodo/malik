@@ -44,7 +44,7 @@ const HandA = () => {
   //   "right",
   //   "right1",
   // ]);
-  
+
   const setIndexOnClick = (clickedIndex: number) => {
     console.log(
       `INDEX CkD: ${awards[clickedIndex].color},  \nINDEX IN 2:${awards[2].color}, \n`,
@@ -53,17 +53,17 @@ const HandA = () => {
     );
 
     const newIndexes = [...awards];
-    const frontIndex = newIndexes.findIndex(item => item.animation === "center")
+    const frontIndex = newIndexes.findIndex(
+      (item) => item.animation === "center"
+    );
     const temp = newIndexes[frontIndex].animation;
     const click = newIndexes[clickedIndex].animation;
     newIndexes[frontIndex].animation = click;
     newIndexes[clickedIndex].animation = temp;
     setAward(newIndexes);
-    setCurrentIndex(clickedIndex)
-   
+    setCurrentIndex(clickedIndex);
   };
 
- 
   const imageVariants = {
     center: { x: "0%", scale: 1, zIndex: 5 },
     left1: { x: "-50%", scale: 0.7, zIndex: 3 },
@@ -104,43 +104,42 @@ const HandA = () => {
   //   });
   // };
 
- 
   return (
     <div
-      id="handa"
-      className="flex  flex-col gap-10 pb-12 md:px-20 m-auto bg-white overflow-hidden"
+      id='handa'
+      className='flex  flex-col gap-10 pb-12 md:px-20 m-auto bg-white overflow-hidden'
     >
       <h2
         style={libre.style}
-        className="text-center pt-[28px] font-semibold text-[34px]"
+        className='text-center pt-[28px] font-semibold text-[34px]'
       >
         Honors And Awards
       </h2>
-      <div className="flex items-center  sm:mx-5 flex-col justify-around  min-h-[60vh] overflow-hidden w-[95%] mx-auto lg:w-full relative">
+      <div className='flex items-center  sm:mx-5 flex-col justify-around  min-h-[60vh] overflow-hidden w-[95%] mx-auto lg:w-full relative'>
         {awards.map((comp, index) => (
           <motion.div
             key={index}
-            className={`absolute lg:w-[25%] cursor-pointer w-[80%] rounded-[20px] bg-header-color text-white py-12 ${comp.color}`}
+            className={`absolute lg:w-[25%] cursor-pointer w-[80%] rounded-[20px] bg-header-color text-white py-12 bg-header`}
             animate={comp.animation}
             variants={imageVariants}
             transition={{ duration: 0.5 }}
-            drag="x"
+            drag='x'
             dragConstraints={{ left: 0, right: 0 }}
-            onDragEnd={()=>setIndexOnClick(index)}
+            onDragEnd={() => setIndexOnClick(index)}
             onClick={() => setIndexOnClick(index)}
           >
             <Image
               src={AwardImg}
-              alt=""
-              className="relative bottom-5 lg:w-full"
+              alt=''
+              className='relative bottom-5 lg:w-full'
             />
-            <p style={poppins.style} className="p-3 text-[18px]  font-normal">
+            <p style={poppins.style} className='p-3 text-[18px]  font-normal'>
               {comp.text}
             </p>
           </motion.div>
         ))}
       </div>
-      <div className="flex justify-center gap-2 mt-4">
+      <div className='flex justify-center gap-2 mt-4'>
         {awards.map((_, index) => (
           <div
             key={index}

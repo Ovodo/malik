@@ -49,7 +49,7 @@ const Page = () => {
         {skills.map((item, index) => (
           <p
             key={index.toString()}
-            className=' px-4  py-2 shadow-[0_3px_3px_rgba(0,0,0,0.25)] text-center w-[75%] rounded-md mb-[50px] mx-auto'
+            className=' px-4 hover:scale-110 duration-300  py-2 shadow-[0_3px_3px_rgba(0,0,0,0.25)] text-center w-[75%] rounded-md mb-[50px] mx-auto'
           >
             {item}
           </p>
@@ -57,11 +57,11 @@ const Page = () => {
       </div>
       <h4
         style={libre.style}
-        className='text-[22px] leading-[22px] text-center w-full'
+        className='text-[22px] leading-[22px] mt-[52px] text-center w-full'
       >
         Language
       </h4>
-      <p className='text-body-color text-[20px] leading-[23.46px] w-full mx-auto mt-6 text-center font-medium'>
+      <p className='text-body-color mb-[62px] text-[20px] leading-[23.46px] w-full mx-auto mt-6 text-center font-medium'>
         English Language
       </p>
       <section className='bg-header-color sm:px-[99px]  py-[67px] sm:py-[72] lg:py-[99px] px-[20px] mt-[32px] w-full'>
@@ -73,10 +73,10 @@ const Page = () => {
         </h2>
         <div className='lg:grid lg:grid-cols-2'>
           {Education.map((item, index) => (
-            <div key={index.toString()} className='mb-[50px] px-[20px]'>
+            <div key={index.toString()} className='mb-[50px] bord px-[20px]'>
               <h3
                 style={poppins.style}
-                className='text-indicatot w-[80%] sm:w-full mb-[20px] text-[22px] leading-[22px]'
+                className='text-indicatot w-[80%]  mb-[20px] text-[22px] leading-[22px]'
               >
                 {item.title}
               </h3>

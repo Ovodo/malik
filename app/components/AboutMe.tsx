@@ -62,7 +62,7 @@ const AboutMe = () => {
       <motion.div
         animate={animation}
         transition={{ type: "tween", duration: 1, delay: 0.5 }}
-        className='lg:w-[60%]  relative bg-[#e6dbd1] bg-opacity-30 w-[80%] rounded-sm lg:p-8   p-8'
+        className='lg:w-[60%]  relative bg-white bg-opacity-30 w-[80%] rounded-sm lg:p-8   p-8'
       >
         <h4
           style={poppins.style}

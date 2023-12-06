@@ -16,7 +16,7 @@ const CerificateCard = ({
   return (
     <Link target='_blank' href={link} className=''>
       <div className='flex rounded-[10px] my-[30px] p-[32px] w-[312px] h-[350px] shadow-[0_5px_5px_rgba(43,56,76,0.2)]  flex-col items-start'>
-        <div className='relative w-[70px] mb-[32px] h-[70px] bg-[#ddc85d] rounded-[5px]'>
+        <div className='relative w-[70px] flex items-center justify-center mb-[32px] h-[70px] bg-[#ddc85d] rounded-[5px]'>
           <Image alt='cert' src={Cert} width={60} height={60} />
         </div>
         <div className=''>

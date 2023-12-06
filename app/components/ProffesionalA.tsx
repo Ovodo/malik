@@ -58,7 +58,7 @@ const ProfessionalA = () => {
         >
           {images.reverse().map((img, i) => (
             <div
-              className='lg:w-[10vw] w-[80vw] min-h-[300px] mb-[34px] mx-2 relative shadow-[0_5px_5px_rgba(43,56,76,0.2)]  border-black lg:min-h-[10vw]'
+              className='lg:w-[10vw] w-[80vw] rounded-[10px] min-h-[300px] mb-[34px] mx-2 relative shadow-[0_5px_5px_rgba(43,56,76,0.2)]  border-black lg:min-h-[10vw]'
               key={i.toString()}
             >
               <Link className='cursor-pointer' href={img.link}>

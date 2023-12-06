@@ -26,9 +26,9 @@ const Socials = ({ src, link }: { src: string; link: string }) => {
       href={link}
       className={` ${
         src.includes("facebook") ? "bg-header-color" : "bg-white"
-      } hover:bg-pink-600 w-10 hover:cursor-pointer duration-300  h-10 p-[15px] rounded-[4px]`}
+      } hover:bg-pink-600 w-10 flex items-center justify-center  hover:cursor-pointer duration-300  h-10 p-[15px] rounded-[4px]`}
     >
-      <div className='w-[16px] hover:scale-110 duration-500  h-[16px] relative'>
+      <div className='w-[16px]  hover:scale-110 duration-500  h-[16px] relative'>
         <Image fill alt='socials' src={src} />
       </div>
     </Link>
@@ -43,6 +43,9 @@ const nameVariants = {
   end: {
     x: 0,
     opacity: 1,
+    transition: {
+      duration: 0.7, // Adjust this duration for each child
+    },
   },
 };
 
@@ -59,7 +62,7 @@ export default function Home() {
           animate='end'
           transition={{
             type: "tween",
-            // duration: 4,
+            duration: 20,
             staggerChildren: 0.7,
             delayChildren: 0.3,
           }}

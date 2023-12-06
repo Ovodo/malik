@@ -91,7 +91,7 @@ export default function Experience() {
           style={libre.style}
           className={`mt-[56px] mb-[50px] text-[34px]  font-semibold  lg:mt-[60px] lg:mb-[100px] text-center`}
         >
-          Work Experience
+          Work Projects
         </h2>
         <div className='px-5  md:px-20 w-[95%] mx-auto'>
           {listExp.map((exp, i) => (
@@ -155,12 +155,12 @@ export default function Experience() {
         </div>
       </section>
 
-      <section className='sm:w-[90%] sm:mx-[32px]'>
+      <section className='sm:w-[90%] bg-white rounded-sm sm:mx-[32px]'>
         <h2
           style={libre.style}
           className='font-semibold text-[34px] w-[205px] sm:w-[577px] mx-auto  mt-[16px] mb-[50px] text-center'
         >
-          Professional Experience
+          Professional Projects
         </h2>
         <div className='w-[320px] sm:w-[100%] m-auto grid   grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-[30px] max-h-max'>
           {proExp.map((exp, i) => (
@@ -197,7 +197,7 @@ export default function Experience() {
           style={libre.style}
           className='font-semibold w-[176px] sm:w-[560px] mx-auto text-[34px]  mb-[50px] text-white  text-center'
         >
-          Volunteer Experience
+          Volunteer Projects
         </h2>
         <div className='w-full m-auto  grid grid-col-1 md:grid-cols-2 place-items-center  gap-4'>
           {volExp.map((exp, i) => (
